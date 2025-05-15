@@ -1,7 +1,8 @@
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Developments from '../components/Developments';
-import Insights from '../components/Insights';
+import Featured from '../components/Featured';
+import Pedigree from '../components/Pedigree';
 import JasonIndex from '../components/JasonIndex';
 import Footer from '../components/Footer';
 
@@ -11,8 +12,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Developments />
-      <Insights />
+      <Featured />     
       <JasonIndex />
+      <Pedigree />      
       <Footer />
     </>
   );
