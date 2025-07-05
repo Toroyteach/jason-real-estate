@@ -20,6 +20,7 @@ class EstateMediaFactory extends Factory
             'estate_id' => \App\Models\Estate::factory(),
             'type' => $this->faker->randomElement(['image', 'video']),
             'file_path' => 'https://via.placeholder.com/800x400.png?text=Estate+Media',
+            'title' => $this->faker->name(),
         ];
     }
 }

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('estate_id')->references('id')->on('estates')->onDelete('cascade');
             $table->string('type'); // image or video
             $table->string('file_path');
+            $table->string('title');
             $table->timestamps();
         });
     }

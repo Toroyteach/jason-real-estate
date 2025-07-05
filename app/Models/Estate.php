@@ -12,8 +12,13 @@ class Estate extends Model
 
     protected $fillable = [
         'title', 'slug', 'description', 'type',
-        'location', 'price', 'status', 'cover_image'
+        'location', 'price', 'status', 'cover_image', 'user_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function categories()
     {
