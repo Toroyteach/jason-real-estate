@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BlogResource\Pages;
 use App\Filament\Resources\BlogResource\RelationManagers;
 use App\Filament\Resources\BlogResource\RelationManagers\BlogImagesRelationManager;
+use App\Filament\Resources\BlogResource\RelationManagers\BlogCommentsRelationManager;
 use App\Filament\Resources\BlogResource\RelationManagers\CategoriesRelationManager;
 use App\Filament\Resources\BlogResource\RelationManagers\TagsRelationManager;
 use App\Filament\Resources\BlogResource\Widgets\BlogEngagementChart;
@@ -109,6 +110,7 @@ class BlogResource extends Resource
     {
         return [
             BlogImagesRelationManager::class,
+            BlogCommentsRelationManager::class,
             CategoriesRelationManager::class,
             TagsRelationManager::class
         ];
@@ -128,8 +130,7 @@ class BlogResource extends Resource
     {
         return [
             BlogPostsChart::class,
-            BlogStatusChart::class,
-            BlogEngagementChart::class
+            BlogStatusChart::class
         ];
     }
 }

@@ -45,4 +45,9 @@ class Blog extends Model
     {
         return $this->hasMany(BlogMedia::class);
     }
+
+    public function blogComments(): HasMany
+    {
+        return $this->hasMany(Comment::class, 'blog_id');
+    }
 }

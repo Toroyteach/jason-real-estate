@@ -21,4 +21,9 @@ class BlogMedia extends Model
     {
         return $this->belongsTo(Blog::class);
     }
+
+    public function getUrlAttribute()
+    {
+        return $this->attributes['file_path'] ?? null;
+    }
 }

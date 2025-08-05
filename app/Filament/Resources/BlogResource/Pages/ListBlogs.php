@@ -24,8 +24,7 @@ class ListBlogs extends ListRecords
     {
         return [
             BlogPostsChart::class,
-            BlogStatusChart::class,
-            BlogEngagementChart::class
+            BlogStatusChart::class
         ];
     }
 }
