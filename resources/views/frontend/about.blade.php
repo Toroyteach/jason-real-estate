@@ -3,14 +3,16 @@
 
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="{{ asset("frontend/assets/img/page-header.jpg") }}">
-    <div class="container">
+<div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/banner.jpg') }}'); position: relative;">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>KNOW ABOUT BUSINEX THE ULTIMATE TEAM</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
+                        <h2 style="color: #fff;">KNOW ABOUT BUSINEX THE ULTIMATE TEAM</h2>
+                        <p style="color: #eee;">Businex always try to provide the best Business Solutions for Clients
                             to grow up their Business very sharply and smoothly.</p>
                     </div>
                 </div>
@@ -71,7 +73,7 @@
 <!--== End About Area Wrapper ==-->
 
 <!--== Start Service Area Wrapper ==-->
-<div class="service-area-wrapper">
+<div class="service-area-wrapper sm-top-wt">
     <div class="service-area-top parallax" data-parallax-speed="0.75" data-bg="{{ asset("frontend/assets/img/service/service-bg.jpg") }}">
         <div class="container">
             <div class="row">
@@ -88,138 +90,40 @@
     <div class="service-content-area">
         <div class="container">
             <div class="row mtn-30">
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Creative Ideas</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link"></a>Creative Ideas</h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/02.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Digital Solutions</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Digital Solutions</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/03.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Brand & Communication</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Brand & Communication</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
+                @forelse ($services as $service)
+                    <div class="col-sm-6 col-lg-4">
+                        <!-- Start Service Item -->
+                        <div class="service-item">
+                            <figure class="service-thumb">
+                                <a href="{{ route('services.details', $service->slug) }}">
+                                    <img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="{{ $service->title }}"/>
+                                </a>
+                                <figcaption class="service-txt">
+                                    <h5>{{ $service->title }}</h5>
+                                </figcaption>
+                            </figure>
+                            <div class="service-content">
+                                <div class="service-content-inner">
+                                    <h5>
+                                        <a href="{{ route('services.details', $service->slug) }}" class="stretched-link">
+                                            {{ $service->title }}
+                                        </a>
+                                    </h5>
+                                    <p>{{ \Illuminate\Support\Str::limit($service->description, 100) }}</p>
+                                </div>
                             </div>
                         </div>
                         <!-- End Service Item -->
                     </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/04.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Creative Strategy</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Creative Strategy</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
+                @empty
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">No services available at the moment. Please check back soon.</p>
                     </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/05.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Marketing Policy</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Marketing Policy</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/06.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Campaign & PR</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Campaign & PR</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
+                @endforelse
             </div>
         </div>
     </div>
+
 </div>
 <!--== End Service Area Wrapper ==-->
 
@@ -291,9 +195,9 @@
             <div class="col-xl-4">
             <div class="team-area-left text-center text-md-start">
                 <div class="section-title section-title--light mb-0">
-                    <h6>Creative Team</h6>
-                    <h2>Meet Our <br>Dedicated Professionals</h2>
-                    <p><strong>Collines Communications</strong> is powered by a team of passionate, creative, and experienced professionals dedicated to visual storytelling, brand impact, and purpose-driven media solutions.</p>
+                    <h6>Meet the Team</h6>
+                    <h2>Driven by Passion, United by Purpose</h2>
+                    <p><strong>Collines Communications</strong> is built on the strength of a visionary team, committed to telling stories that resonate and strategies that create real impact.</p>
                 </div>
             </div>
         </div>
@@ -301,62 +205,29 @@
         <div class="col-xl-8">
             <div class="team-area-right team-area-right--2 bg-img" data-bg="{{ asset("frontend/assets/img/team/team-bg-2.jpg") }}">
                 <div class="row g-0 align-items-end mtn-40">
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-01.png") }}" alt="Collines Omondi"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Collines Omondi</a></h5>
-                                <span class="designation">Founder & Managing Director</span>
+                    @foreach($teams as $member)
+                        <div class="col-sm-6 col-lg-2">
+                            <div class="team-mem-item team-mem-item--2">
+                                <figure class="member-pic">
+                                    <img src="{{ asset("frontend/assets/img/team/h-2-01.png") }}" alt="Collines Omondi"/>
+                                </figure>
+                                <div class="member-info">
+                                    <h5><a href="{{ route('teams.details', $member->slug) }}">{{ $member->name }}</a></h5>
+                                    <span class="designation">{{ $member->title }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-02.png") }}" alt="Anne Kibei"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Anne Kibei</a></h5>
-                                <span class="designation">Digital Media Strategist</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-03.png") }}" alt="Samuel Oduor"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Samuel Oduor</a></h5>
-                                <span class="designation">Lead Cinematographer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-04.png") }}" alt="Samuel Gitau"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Samuel Gitau</a></h5>
-                                <span class="designation">Lead Photographer</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!--== End Team Area Wrapper ==-->
 
 <!--== Start History Area Wrapper ==-->
-<div class="history-area bg-offwhite sp-y">
+<!-- <div class="history-area bg-offwhite sp-y">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-4">
@@ -408,7 +279,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--== End History Area Wrapper ==-->
 
 <!--== Start Brand Logo Area Wrapper ==-->

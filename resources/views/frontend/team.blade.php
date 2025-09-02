@@ -2,15 +2,14 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="src="{{ asset("frontend/assets/img/page-header.jpg") }}">
+<div class="page-header-area bg-img" data-bg="{{ asset('frontend/assets/img/page-header.jpg') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>KNOW ABOUT BUSINEX THE ULTIMATE TEAM</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2>THE COLLINES COMMS TEAM</h2>
+                        <p>We are a passionate team of creatives, strategists, and storytellers committed to bringing your vision to life through impactful media and communication.</p>
                     </div>
                 </div>
             </div>
@@ -25,18 +24,15 @@
         <div class="row align-items-lg-center">
             <div class="col-md-6 col-lg-7 order-1">
                 <div class="about-content ms-0">
-                    <h6>Our Team</h6>
-                    <h2>Meet Our <br> Expert Member</h2>
-                    <p><strong>Businex</strong> always try to provide the best Business Solutions for Clinets to
-                        grow up their Business very sharply and smoothly. We voluptatem quia
-                        voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                        magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <h6>Meet the Team</h6>
+                    <h2>People Behind the Vision</h2>
+                    <p><strong>At Collines Comms</strong>, our team blends creativity with strategy to deliver outstanding content, design, and campaigns. Every member brings unique expertise that powers our storytelling and execution.</p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-5 order-0 order-md-1">
                 <figure class="about-thumb">
-                    <img src="{{ asset("frontend/assets/img/about.jpg") }}" alt="Businex-About"/>
+                    <img src="{{ asset('frontend/assets/img/about.jpg') }}" alt="Collines Comms Team"/>
                 </figure>
             </div>
         </div>
@@ -48,101 +44,27 @@
 <div class="team-page-area-wrapper bg-offwhite sp-y sm-top">
     <div class="container">
         <div class="row mtn-30">
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/01.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">Lucy Farnando</a></h5>
-                        <span class="designation">CTO & Founder</span>
+            @forelse ($teams as $member)
+                <div class="col-sm-6 col-lg-3">
+                    <div class="team-mem-item">
+                        <figure class="member-pic">
+                            <img src="{{ asset($member->img_src ?? 'frontend/assets/img/team/01.jpg') }}" alt="{{ $member->name }}" />
+                        </figure>
+                        <div class="member-info">
+                            <h5>
+                                <a href="{{ route('teams.details', $member->slug) }}" class="stretched-link">
+                                    {{ $member->name }}
+                                </a>
+                            </h5>
+                            <span class="designation">{{ $member->title }}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/02.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">James Anderson</a></h5>
-                        <span class="designation">Creative Head</span>
-                    </div>
+            @empty
+                <div class="col-12 text-center py-5">
+                    <p class="text-muted">No team members found. Please check back soon.</p>
                 </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/03.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">Thomas Nancy</a></h5>
-                        <span class="designation">Marketing Head</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/04.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">Nail Mathue</a></h5>
-                        <span class="designation">Head of Research</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/05.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">Lucy Farnando</a></h5>
-                        <span class="designation">CTO & Founder</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/06.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">James Anderson</a></h5>
-                        <span class="designation">Creative Head</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/01.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">Thomas Nancy</a></h5>
-                        <span class="designation">Marketing Head</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-3">
-                <div class="team-mem-item">
-                    <figure class="member-pic">
-                        <img src="{{ asset("frontend/assets/img/team/02.jpg") }}" alt="Team-Businex"/>
-                    </figure>
-                    <div class="member-info">
-                        <h5><a href="team-details.html" class="stretched-link">Nail Mathue</a></h5>
-                        <span class="designation">Head of Research</span>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </div>

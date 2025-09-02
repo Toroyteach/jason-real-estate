@@ -15,9 +15,9 @@ Route::prefix('blog')->name('blogs.')->group(function () {
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/services', [PageController::class, 'services'])->name('services');
-Route::get('/services/details', [PageController::class, 'serviceDetails'])->name('services.details');
-Route::get('/team', [PageController::class, 'team'])->name('team');
-Route::get('/team/details', [PageController::class, 'teamDetail'])->name('team.details');
+Route::get('/services/{slug}', [PageController::class, 'serviceDetails'])->name('services.details');
+Route::get('/teams', [PageController::class, 'teams'])->name('teams');
+Route::get('/teams/{slug}', [PageController::class, 'teamDetails'])->name('teams.details');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');
 Route::post('/contact-submit', [PageController::class, 'submit'])->name('contact.submit');
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');

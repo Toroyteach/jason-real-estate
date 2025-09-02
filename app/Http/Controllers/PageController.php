@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ContactMessage;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PageController extends Controller
 {
@@ -13,33 +15,66 @@ class PageController extends Controller
         $blogs = Blog::where('is_published', true)
             ->latest()
             ->paginate(3);
-
-        return view('frontend.home', compact('blogs'));
+    
+        $teams = $this->getTeam(); // pass to homepage
+        $services = $this->getServices();
+    
+        return view('frontend.home', compact('blogs', 'teams', 'services'));
     }
 
     public function about()
     {
-        return view('frontend.about');
+        $services = $this->getServices();
+        $teams = $this->getTeam();
+        return view('frontend.about', compact('services', 'teams'));
     }
 
     public function services()
     {
-        return view('frontend.service');
+        $services = $this->getServices();
+        return view('frontend.service', compact('services'));
     }
 
-    public function serviceDetails()
+    public function serviceDetails($slug)
     {
-        return view('frontend.service-detail');
+        $services = $this->getServices();
+        $service = collect($services)->firstWhere('slug', $slug);
+
+        if (!$service) {
+            abort(404);
+        }
+
+        return view('frontend.service-detail', compact('service'));
     }
 
-    public function team()
+    private function getServices()
     {
-        return view('frontend.team');
+        $json = Storage::get('services.json');
+        return json_decode($json);
+    }
+    
+    public function teams()
+    {
+        $teams = $this->getTeam();
+        return view('frontend.team', compact('teams'));
+    }
+    
+    public function teamDetails($slug)
+    {
+        $teams = $this->getTeam();
+        $team = collect($teams)->firstWhere('slug', $slug);
+    
+        if (!$team) {
+            abort(404);
+        }
+    
+        return view('frontend.team-detail', compact('team'));
     }
 
-    public function teamDetail()
+    private function getTeam()
     {
-        return view('frontend.team-detail');
+        $json = Storage::get('teams.json');
+        return json_decode($json);
     }
 
     public function contact()

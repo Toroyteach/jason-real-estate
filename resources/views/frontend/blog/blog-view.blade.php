@@ -2,15 +2,21 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="{{ asset("frontend/assets/img/page-header.jpg") }}">
+<div class="page-header-area bg-img" data-bg="{{ asset('frontend/assets/img/page-header.jpg') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>Blog Details</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2>{{ $blog->title ?? 'Blog Title' }}</h2>
+                        <p>{{ $blog->excerpt ?? Str::limit(strip_tags($blog->content), 150) }}</p>
+                        <div class="breadcrumb-wrap">
+                            <ul class="breadcrumb">
+                                <li><a href="{{ route('home') }}">Home</a></li>
+                                <li><a href="{{ route('blogs.index') }}">Blogs</a></li>
+                                <li><span class="current">{{ $blog->title ?? 'Details' }}</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

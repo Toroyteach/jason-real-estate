@@ -2,15 +2,14 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="{{ asset("frontend/assets/img/page-header.jpg") }}">
+<div class="page-header-area bg-img" data-bg="{{ asset('frontend/assets/img/page-header.jpg') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>FROM BUSINEX LATEST</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2>Insights & Stories</h2>
+                        <p>Explore perspectives from the Collines Comms team — from content strategy to media trends and storytelling tips that inspire impact-driven communication.</p>
                     </div>
                 </div>
             </div>
@@ -109,7 +108,7 @@
                                 <div class="blog-item">
                                     <figure class="blog-thumb">
                                         <a href="{{ route('blogs.show', $blog->slug) }}">
-                                            <img src="{{ optional($blog->blogImages->first())->file_path ? asset('storage/' . $blog->blogImages->first()->file_path) : asset('frontend/assets/img/placeholder.jpg') }}"
+                                            <img src="{{ optional($blog->blogImages->first())->file_path ? asset('storage/' . $blog->blogImages->first()->file_path) : asset('frontend/assets/img/service/04.jpg') }}"
                                             alt="{{ $blog->title }}">
                                         </a>
                                     </figure>

@@ -54,7 +54,7 @@
             <div class="col-5 col-lg-2">
                 <!-- Start Logo Area -->
                 <div class="logo-area">
-                    <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/img/logo.png") }}" alt="Businex-Logo"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/logo.jpg") }}" alt="collines-Logo"></a>
                 </div>
                 <!-- End Logo Area -->
             </div>
@@ -67,20 +67,17 @@
 
                     <li class="has-submenu"><a href="#">Pages</a>
                         <ul class="submenu-nav submenu-nav-mega">
-                            <li class="mega-menu-item"><a href="#">Page Sample 01</a>
+                            <li class="mega-menu-item">
                                 <ul>
-                                    <li><a href="{{ route('home') }}">Home 01</a></li>
-                                    <li><a href="{{ route('home') }}">Home 02</a></li>
+                                    <li><a href="{{ route('home') }}">Home</a></li>
                                     <li><a href="{{ route('about') }}">About</a></li>
                                     <li><a href="{{ route('faq') }}">F.A.Q</a></li>
                                 </ul>
                             </li>
-                            <li class="mega-menu-item"><a href="#">Page Sample 02</a>
+                            <li class="mega-menu-item">
                                 <ul>
                                     <li><a href="{{ route('services') }}">Service</a></li>
-                                    <li><a href="{{ route('services.details') }}">Service Details</a></li>
-                                    <li><a href="{{ route('team') }}">Team</a></li>
-                                    <li><a href="{{ route('team.details') }}">Team Details</a></li>
+                                    <li><a href="{{ route('teams') }}">Team</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -89,14 +86,12 @@
                     <li class="has-submenu"><a href="{{ route('services') }}">Service</a>
                         <ul class="submenu-nav">
                             <li><a href="{{ route('services') }}">Service</a></li>
-                            <li><a href="{{ route('services.details') }}">Service Details</a></li>
                         </ul>
                     </li>
 
-                    <li class="has-submenu"><a href="{{ route('team') }}">Team</a>
+                    <li class="has-submenu"><a href="{{ route('teams') }}">Team</a>
                         <ul class="submenu-nav">
-                            <li><a href="{{ route('team') }}">Team</a></li>
-                            <li><a href="{{ route('team.details') }}">Team Details</a></li>
+                            <li><a href="{{ route('teams') }}">Team</a></li>
                         </ul>
                     </li>
 
@@ -110,7 +105,7 @@
             <div class="col-7 col-lg-3">
                 <!-- Start Header Action Area -->
                 <div class="header-action text-end">
-                    <a href="tel:00199823568658" class="tel-no">+998 23568 658</a>
+                    <a href="tel:+254728312251" class="tel-no">+254728312251</a>
                     <button class="btn-cog"><i class="fa fa-cog"></i></button>
                     <button class="btn-menu d-lg-none"><i class="fa fa-bars"></i></button>
                 </div>
@@ -130,12 +125,11 @@
             <div class="footer-top-content">
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-6">
-                        <h2>Get Started Today</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets to grow up their
-                            Business sharply and smoothly.</p>
+                        <h2>Ready to Tell Your Story?</h2>
+                        <p>Partner with us to create visuals that resonate, inspire, and connect — locally and globally.</p>
                     </div>
                     <div class="col-md-4 col-lg-6 text-md-end mt-sm-25">
-                        <a href="contact.html" class="btn-outline">Contact Us</a>
+                        <a href="{{ route('contact') }}" class="btn-outline">Book a Consultation</a>
                     </div>
                 </div>
             </div>
@@ -148,15 +142,15 @@
                 <div class="col-lg-4 order-4 order-lg-0">
                     <div class="widget-item">
                         <div class="about-widget">
-                            <a href="index.html"><img src="frontend/assets/img/logo-dark.png" alt="Logo"/></a>
-                            <p>During the summer my wife and I got to go on an amazing road trip in Vancouver.</p>
+                            <a href="index.html"><img src="frontend/assets/logo.jpg" alt="Logo"/></a>
+                            <p>Collines Communications is a visual storytelling studio helping brands and individuals share powerful, authentic narratives across Kenya and beyond.</p>
 
                             <div class="copyright-txt">
                                 <p>&copy;
                                     <script>
                                         document.write(new Date().getFullYear())
                                     </script>
-                                    Businex Ltd. All Rights Reserved.
+                                    {{ config('app.name') }}. All Rights Reserved.
                                 </p>
                             </div>
                         </div>
@@ -171,7 +165,6 @@
                                 <li><a href="{{ route('about') }}">Our company</a></li>
                                 <li><a href="{{ route('contact') }}">Contact us</a></li>
                                 <li><a href="{{ route('services') }}">Our services</a></li>
-                                <li><a href="#">Careers</a></li> {{-- Add route if/when Careers page exists --}}
                             </ul>
                         </div>
                     </div>
@@ -182,10 +175,11 @@
                         <h4 class="widget-title">Quick Links</h4>
                         <div class="widget-body">
                             <ul class="widget-list">
-                                <li><a href="#">Facebook</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Dribbble</a></li>
-                                <li><a href="#">Instagram</a></li>
+                                <li><a href="https://instagram.com/collinescomms" target="_blank" rel="noopener">Instagram</a></li>
+                                <li><a href="https://twitter.com/CollinesComms" target="_blank" rel="noopener">X (Twitter)</a></li>
+                                <li><a href="https://www.youtube.com/@collinescomms" target="_blank" rel="noopener">YouTube</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" rel="noopener">WhatsApp</a></li>
+                                <li><a href="mailto:info@collinecommunications.com" target="_blank" rel="noopener">Email</a></li>
                             </ul>
                         </div>
                     </div>
@@ -196,9 +190,11 @@
                         <h4 class="widget-title">Contact</h4>
                         <div class="widget-body">
                             <address>
-                                2005 Stokes Isle Apartment. 896, Washington 10010, USA <br>
-                                https://example.com <br>
-                                (+68) 120034509
+                                    Nairobi, Kenya
+                                    <br>
+                                    info@collinecommunication.com
+                                    <br>
+                                    (+254) 728312251
                             </address>
                         </div>
                     </div>
@@ -262,7 +258,7 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        Businex Ltd. All Rights Reserved.
+                        {{ config('app.name') }}. All Rights Reserved.
                     </p>
                 </div>
             </div>

@@ -8,9 +8,8 @@
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>CONTACT US</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2>GET IN TOUCH</h2>
+                        <p>Let’s start telling your story. Whether you’re planning a campaign, launching a brand, or capturing a milestone, our team is here to guide you every step of the way.</p>
                     </div>
                 </div>
             </div>
@@ -93,20 +92,31 @@
 
                             <div class="widget-item m-0">
                                 <address>
-                                    2005 Stokes Isle Apartment. 896, Washington 10010, USA
+                                    Nairobi, Kenya
                                     <br>
-                                    https://example.com
+                                    https://collinescommunications.com
                                     <br>
-                                    hello@example.com
+                                    info@collinecommunication.com
                                     <br>
-                                    (+68) 120034509
+                                    (+254) 728312251
                                 </address>
                             </div>
                             <div class="member-social-icons mt-30">
-                                <a href="#"><i class="mdi mdi-facebook"></i></a>
-                                <a href="#"><i class="mdi mdi-twitter"></i></a>
-                                <a href="#"><i class="mdi mdi-linkedin"></i></a>
-                                <a href="#"><i class="mdi mdi-pinterest"></i></a>
+                                <a href="https://instagram.com/collinescomms" target="_blank" rel="noopener">
+                                    <i class="mdi mdi-instagram"></i>
+                                </a>
+                                <a href="https://twitter.com/CollinesComms" target="_blank" rel="noopener">
+                                    <i class="mdi mdi-twitter"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@collinescomms" target="_blank" rel="noopener">
+                                    <i class="mdi mdi-youtube"></i>
+                                </a>
+                                <a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" rel="noopener">
+                                    <i class="mdi mdi-whatsapp"></i>
+                                </a>
+                                <a href="mailto:info@collinecommunications.com" target="_blank" rel="noopener">
+                                    <i class="mdi mdi-email"></i>
+                                </a>
                             </div>
                         </div>
                     </div>

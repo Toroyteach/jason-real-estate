@@ -8,9 +8,8 @@
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>KNOW ABOUT BUSINEX THE ULTIMATE TEAM</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2>VISUAL COMMUNICATION THAT CONNECTS</h2>
+                        <p>From photography and video to branding and campaigns, we help individuals and organizations tell stories that resonate, inspire, and elevate.</p>
                     </div>
                 </div>
             </div>
@@ -26,17 +25,14 @@
             <div class="col-md-6 col-lg-7 order-1">
                 <div class="about-content ms-0">
                     <h6>Our Services</h6>
-                    <h2>Provide best <br> Business Solutions</h2>
-                    <p><strong>Businex</strong> always try to provide the best Business Solutions for Clinets to
-                        grow up their Business very sharply and smoothly. We voluptatem quia
-                        voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-                        magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <h2>Creative Solutions <br> Rooted in Storytelling</h2>
+                    <p><strong>Collines Communications</strong> is a full-service studio blending photography, filmmaking, branding, and digital strategy to deliver purpose-driven content. We tailor every service to reflect authenticity, vision, and local context — capturing the essence of every story.</p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-5 order-0 order-md-1">
                 <figure class="about-thumb">
-                    <img src="{{ asset("frontend/assets/img/about.jpg") }}" alt="Businex-About"/>
+                    <img src="{{ asset("frontend/assets/img/about.jpg") }}" alt="About Collines Communications"/>
                 </figure>
             </div>
         </div>
@@ -62,138 +58,40 @@
     <div class="service-content-area">
         <div class="container">
             <div class="row mtn-30">
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Creative Ideas</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link"></a>Creative Ideas</h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/02.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Digital Solutions</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Digital Solutions</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/03.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Brand & Communication</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Brand & Communication</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
+                @forelse ($services as $service)
+                    <div class="col-sm-6 col-lg-4">
+                        <!-- Start Service Item -->
+                        <div class="service-item">
+                            <figure class="service-thumb">
+                                <a href="{{ route('services.details', $service->slug) }}">
+                                    <img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="{{ $service->title }}"/>
+                                </a>
+                                <figcaption class="service-txt">
+                                    <h5>{{ $service->title }}</h5>
+                                </figcaption>
+                            </figure>
+                            <div class="service-content">
+                                <div class="service-content-inner">
+                                    <h5>
+                                        <a href="{{ route('services.details', $service->slug) }}" class="stretched-link">
+                                            {{ $service->title }}
+                                        </a>
+                                    </h5>
+                                    <p>{{ \Illuminate\Support\Str::limit($service->description, 100) }}</p>
+                                </div>
                             </div>
                         </div>
                         <!-- End Service Item -->
                     </div>
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/04.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Creative Strategy</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Creative Strategy</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
+                @empty
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">No services available at the moment. Please check back soon.</p>
                     </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/05.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Marketing Policy</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Marketing Policy</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/06.jpg") }}" alt="Businex-Service"/></a>
-
-                            <figcaption class="service-txt">
-                                <h5>Campaign & PR</h5>
-                            </figcaption>
-                        </figure>
-
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Campaign & PR</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                    elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
+                @endforelse
             </div>
         </div>
     </div>
+
 </div>
 <!--== End Service Area Wrapper ==-->
 
@@ -414,8 +312,8 @@
                 <div class="testimonial-area-right">
                     <div class="section-title d-none d-lg-block">
                         <h6>TESTIMONIALS</h6>
-                        <h2>Don’t Believe us, <br> Check Client Word</h2>
-                        <h5 class="tagline">More over <span class="tag-no">1900+</span> <strong>customer</strong></h5>
+                        <h2>What Our Clients Say<br>About Working With Us</h2>
+                        <h5 class="tagline">Featured clients <span class="tag-no">4+</span> <strong>endorsements</strong></h5>
                     </div>
 
                     <div class="testimonial-content-wrap pl-0">
@@ -423,12 +321,9 @@
                             <!-- Start Testimonial Item -->
                             <div class="testimonial-item testimonial-item--2">
                                 <div class="testimonial-txt">
-                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Businex"/>
-                                    <p>Very much happy with provide the best Business
-                                        Solutions for Clients to grow up their Business very
-                                        sharply. pursue pleasure rationally encounter.</p>
-                                    <h5 class="client-name">David Loyed, <span
-                                            class="designation">CTO, Aflex Group</span></h5>
+                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
+                                    <p>“Give them a concept, they will always create a good story out of it.”</p>
+                                    <h5 class="client-name">Dan Joshua Oduor, <span class="designation">Founder & Director, Stawisha Africa Initiative</span></h5>
                                 </div>
                             </div>
                             <!-- End Testimonial Item -->
@@ -436,12 +331,9 @@
                             <!-- Start Testimonial Item -->
                             <div class="testimonial-item testimonial-item--2">
                                 <div class="testimonial-txt">
-                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Businex"/>
-                                    <p>Very much happy with provide the best Business
-                                        Solutions for Clients to grow up their Business very
-                                        sharply. pursue pleasure rationally encounter.</p>
-                                    <h5 class="client-name">Alex Tuntuni, <span class="designation">Co-Founder, Tuntuni Group</span>
-                                    </h5>
+                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
+                                    <p>“The team pays attention to detail … We were satisfied by the excellent work and how they conducted themselves from inception to project completion.”</p>
+                                    <h5 class="client-name">Rachel Kalera‑Mhango, <span class="designation">Communications & Media Engagement Officer, Urgent Action Fund – Africa</span></h5>
                                 </div>
                             </div>
                             <!-- End Testimonial Item -->
@@ -449,17 +341,24 @@
                             <!-- Start Testimonial Item -->
                             <div class="testimonial-item testimonial-item--2">
                                 <div class="testimonial-txt">
-                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Businex"/>
-                                    <p>Very much happy with provide the best Business
-                                        Solutions for Clients to grow up their Business very
-                                        sharply. pursue pleasure rationally encounter.</p>
-                                    <h5 class="client-name">John Fault, <span
-                                            class="designation">COO, Mafia Group</span></h5>
+                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
+                                    <p>“They demonstrated professionalism and experience … observed timelines and are always willing to do extra to ensure they have the best outcome.”</p>
+                                    <h5 class="client-name">Hillary Omondi, <span class="designation">Coordinator, Siaya Muungano Network</span></h5>
                                 </div>
+                            </div>
+                            <!-- End Testimonial Item -->
 
+                            <!-- Start Testimonial Item -->
+                            <div class="testimonial-item testimonial-item--2">
+                                <div class="testimonial-txt">
+                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
+                                    <p>“They have been responsible for handling the photography and graphic design aspects of all our projects..., they have consistently been of the highest caliber.”</p>
+                                    <h5 class="client-name">Joseph Odindo Lare, <span class="designation">COO, Givewatts</span></h5>
+                                </div>
                             </div>
                             <!-- End Testimonial Item -->
                         </div>
+
                         <div class="testimonial-arrows-2"></div>
                     </div>
                 </div>

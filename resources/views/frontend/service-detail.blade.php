@@ -8,14 +8,13 @@
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>KNOW ABOUT BUSINEX</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2>OUR SERVICES</h2>
+                        <p>At Collines Communications, we craft authentic, visually compelling content — from photography and film to branding and digital campaigns — tailored to resonate with your audience.</p>
                         <div class="breadcrumb-wrap">
                             <ul class="breadcrumb">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="service.html">Service</a></li>
-                                <li><a class="current" href="service-details.html">Service Details</a></li>
+                                <li><a href="{{ url('/') }}">Home</a></li>
+                                <li><a href="{{ route('services') }}">Services</a></li>
+                                <li><a class="current" href="#">Service Details</a></li>
                             </ul>
                         </div>
                     </div>
@@ -39,113 +38,30 @@
                             <img src="{{ asset("frontend/assets/img/service/details/03.jpg") }}" alt="Businex-Service Details"/>
                         </figure>
                         <div class="service-details-info">
-                            <h3>Digital Solutions</h3>
-                            <p>Voluptatum delenitied atqued corrupti is eseted quased stias cepturi sint aete non
-                                provident,
-                                similique sunt dunt labore ete dolored magnam aliquam quaerat Neque porro quisquam
-                                est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                numquam
-                                eius modi tempora incidun</p>
+                            <h3>{{ $service->title }}</h3>
 
-                            <div class="about-service mt-50 mt-sm-35">
-                                <h4>About this Service</h4>
-                                <p>Voluptatum delenitied atqued corrupti is eseted quased stias cepturi sint aete non
-                                    provident,
-                                    similique sunt dunt labore ete dolored magnam aliquam quaerat Neque porro quisquam
-                                    est,
-                                    qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non
-                                    numquam
-                                    eius modi tempora incidun</p>
-                                <p>Corrupti deleniti atque magnam is es et quas stias cepturi sint aete non provident,
-                                    similique sunt dunt ut labore et dolore magnam aliquam quaerat Neque porro quisquam
-                                    est dolorem</p>
-                                <ul class="service-feature">
-                                    <li>voluptatum deleniti atque corrupti is es et quas stias cepturi sint aete non
-                                        provident, similique sunt dunt ut labore et dolore magnam aliquam quaerat
-                                    </li>
-                                    <li>voluptatum deleniti atque corrupti is es et quas stias cepturi sint aete non
-                                        provident, similique sunt dunt ut labore et dolore magnam aliquam quaerat
-                                    </li>
-                                </ul>
+                            @if (!empty($service->sub_title))
+                                <p class="text-muted">{{ $service->sub_title }}</p>
+                            @endif
+
+                            <div class="about-service mt-sm-35">
+                                <p>{{ $service->description }}</p>
+
+                                @if (!empty($service->items))
+                                    <ul class="service-feature">
+                                        @foreach ($service->items as $item)
+                                            <li>{{ $item }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
 
-                            <div class="how-we-works-wrap mt-50 mt-sm-35">
-                                <h4>How we work</h4>
-                                <p>voluptatum deleniti atque corrupti is es et quas stias cepturi sint aete non
-                                    provident, similique sunt dunt ut labore et dolore magnam aliquam quaerat Neque
-                                    porro quisquam est, qui dolorem ipsum </p>
-
-                                <div class="how-we-works-content">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="icon-box-item">
-                                                <div class="icon-box__icon">
-                                                    <img src="{{ asset("frontend/assets/img/service/icon/strategy.png") }}"
-                                                         alt="Businex - How we work"/>
-                                                </div>
-                                                <div class="icon-box__info">
-                                                    <h5>Case Strategy</h5>
-                                                    <p>voluptatum deleniti atqued corrupti cepturi
-                                                        sinte aeted psamtem quia voluptas sit aut odit aut
-                                                        fugit. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="icon-box-item">
-                                                <div class="icon-box__icon">
-                                                    <img src="{{ asset("frontend/assets/img/service/icon/track-record.png") }}"
-                                                         alt="Businex - How we work"/>
-                                                </div>
-                                                <div class="icon-box__info">
-                                                    <h5>Track Record</h5>
-                                                    <p>voluptatum deleniti atqued corrupti cepturi
-                                                        sinte aeted psamtem quia voluptas sit aut odit aut
-                                                        fugit. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="icon-box-item">
-                                                <div class="icon-box__icon">
-                                                    <img src="{{ asset("frontend/assets/img/service/icon/research.png") }}"
-                                                         alt="Businex - How we work"/>
-                                                </div>
-                                                <div class="icon-box__info">
-                                                    <h5>Research & Investigation</h5>
-                                                    <p>voluptatum deleniti atqued corrupti cepturi
-                                                        sinte aeted psamtem quia voluptas sit aut odit aut
-                                                        fugit. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="icon-box-item">
-                                                <div class="icon-box__icon">
-                                                    <img src="{{ asset("frontend/assets/img/service/icon/analysis.png") }}"
-                                                         alt="Businex - How we work"/>
-                                                </div>
-                                                <div class="icon-box__info">
-                                                    <h5>Case Analysis</h5>
-                                                    <p>voluptatum deleniti atqued corrupti cepturi
-                                                        sinte aeted psamtem quia voluptas sit aut odit aut
-                                                        fugit. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="pagination-wrap">
+                            <!-- <div class="pagination-wrap">
                                 <ul class="pagination">
                                     <li class="prev"><a href="#"><i class="fa fa-long-arrow-left"></i> Previous</a></li>
                                     <li class="next"><a href="#">Next <i class="fa fa-long-arrow-right"></i></a></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -153,7 +69,7 @@
                 <div class="col-lg-4 mtn-40">
                     <div class="sidebar-wrap mt-sm-90 mt-md-100">
                         <!-- Start Sidebar Item -->
-                        <div class="sidebar-single">
+                        <!-- <div class="sidebar-single">
                             <h3 class="sidebar-heading">Services</h3>
                             <div class="sidebar-body">
                                 <ul class="service-list">
@@ -165,7 +81,7 @@
                                     <li><a href="service-details.html">Campaign & PR</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Sidebar Item -->
 
                         <!-- Start Sidebar Item -->
@@ -186,88 +102,6 @@
     </div>
 </div>
 <!--== End Page Content Area Wrapper ==-->
-
-<!--== Start Related Service Area ==-->
-<div class="related-service-area sm-top-wt">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7 m-auto text-center">
-                <div class="section-title">
-                    <h6>More Services</h6>
-                    <h2>Related Services</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mtn-30">
-            <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                    <figure class="service-thumb">
-                        <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="Businex-Service"/></a>
-
-                        <figcaption class="service-txt">
-                            <h5>Creative Ideas</h5>
-                        </figcaption>
-                    </figure>
-                    <div class="service-content">
-                        <div class="service-content-inner">
-                            <h5><a href="service-details.html" class="stretched-link"></a>Creative Ideas</h5>
-                            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Item -->
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                    <figure class="service-thumb">
-                        <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/02.jpg") }}" alt="Businex-Service"/></a>
-
-                        <figcaption class="service-txt">
-                            <h5>Digital Solutions</h5>
-                        </figcaption>
-                    </figure>
-
-                    <div class="service-content">
-                        <div class="service-content-inner">
-                            <h5><a href="service-details.html" class="stretched-link">Digital Solutions</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service Item -->
-            </div>
-
-            <div class="col-sm-6 col-lg-4">
-                <!-- Start Service Item -->
-                <div class="service-item">
-                    <figure class="service-thumb">
-                        <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/03.jpg") }}" alt="Businex-Service"/></a>
-
-                        <figcaption class="service-txt">
-                            <h5>Brand & Communication</h5>
-                        </figcaption>
-                    </figure>
-
-                    <div class="service-content">
-                        <div class="service-content-inner">
-                            <h5><a href="service-details.html" class="stretched-link">Brand & Communication</a></h5>
-                            <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing
-                                elit. Asdipiscing elit. Consectetur adipisicing hastech.</p>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--== End Related Service Area ==-->
 
 <!--== Start Brand Logo Area Wrapper ==-->
 <div class="brand-logo-area sm-top">

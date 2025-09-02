@@ -139,7 +139,7 @@
 <!--== End About Area Wrapper ==-->
 
 <!--== Start Service Area Wrapper ==-->
-<div class="service-area-wrapper">
+<div class="service-area-wrapper sm-top-wt">
     <div class="service-area-top parallax" data-parallax-speed="0.75" data-bg="{{ asset("frontend/assets/img/service/service-bg.jpg") }}">
         <div class="container">
             <div class="row">
@@ -156,250 +156,42 @@
     <div class="service-content-area">
         <div class="container">
             <div class="row mtn-30">
-            <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="Wedding Photography"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Wedding Photography</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Wedding Photography</a></h5>
-                                <p>We create a stunning collection of photographs that reflect the love, joy, and unique story of each couple’s special day.</p>
+                @forelse ($services as $service)
+                    <div class="col-sm-6 col-lg-4">
+                        <!-- Start Service Item -->
+                        <div class="service-item">
+                            <figure class="service-thumb">
+                                <a href="{{ route('services.details', $service->slug) }}">
+                                    <img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="{{ $service->title }}"/>
+                                </a>
+                                <figcaption class="service-txt">
+                                    <h5>{{ $service->title }}</h5>
+                                </figcaption>
+                            </figure>
+                            <div class="service-content">
+                                <div class="service-content-inner">
+                                    <h5>
+                                        <a href="{{ route('services.details', $service->slug) }}" class="stretched-link">
+                                            {{ $service->title }}
+                                        </a>
+                                    </h5>
+                                    <p>{{ \Illuminate\Support\Str::limit($service->description, 100) }}</p>
+                                </div>
                             </div>
                         </div>
+                        <!-- End Service Item -->
                     </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/02.jpg") }}" alt="Event Videography"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Event Videography</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Event Videography</a></h5>
-                                <p>We create captivating event films that transport viewers back to the experience, preserving the essence and emotions of the occasion.</p>
-                            </div>
-                        </div>
+                @empty
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">No services available at the moment. Please check back soon.</p>
                     </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/03.jpg") }}" alt="Portrait Photography"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Portrait Photography</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Portrait Photography</a></h5>
-                                <p>We create timeless portraits that authentically reflect the essence and character of the subjects, resulting in cherished memories.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/04.jpg") }}" alt="Commercial Photography"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Commercial Photography</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Commercial Photography</a></h5>
-                                <p>We create high-quality visuals that effectively communicate the brand’s message, attract customers, and drive business success.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/05.jpg") }}" alt="Branding Services"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Branding Services</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Branding Services</a></h5>
-                                <p>We collaborate closely with clients to develop brand strategies, including logo design, brand messaging, and visual guidelines that resonate with the target audience.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/06.jpg") }}" alt="Digital Marketing"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Digital Marketing</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Digital Marketing</a></h5>
-                                <p>We develop customized digital marketing strategies, including social media management, search engine optimization (SEO), content creation, and online advertising.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/06.jpg") }}" alt="Digital Marketing"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Product Photography</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Product Photography</a></h5>
-                                <p>We create visually striking photographs that enhance product visibility, attract customers, and drive sales.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
-
-                <div class="col-sm-6 col-lg-4">
-                    <!-- Start Service Item -->
-                    <div class="service-item">
-                        <figure class="service-thumb">
-                            <a href="service-details.html"><img src="{{ asset("frontend/assets/img/service/06.jpg") }}" alt="Digital Marketing"/></a>
-                            <figcaption class="service-txt">
-                                <h5>Documentary Filmmaking</h5>
-                            </figcaption>
-                        </figure>
-                        <div class="service-content">
-                            <div class="service-content-inner">
-                                <h5><a href="service-details.html" class="stretched-link">Documentary Filmmaking</a></h5>
-                                <p>We capture real-life events, personal narratives, or documentary-style content with a focus on emotional impact and storytelling.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Service Item -->
-                </div>
+                @endforelse
             </div>
         </div>
     </div>
+
 </div>
 <!--== End Service Area Wrapper ==-->
-
-<!--== Start Testimonial Area Wrapper ==-->
-<div class="testimonial-area testimonial-area--2 bg-offwhite sm-top">
-    <div class="container">
-        <div class="row d-lg-none">
-            <div class="col-12 text-center">
-                <div class="section-title">
-                    <h6>TESTIMONIALS</h6>
-                    <h2>Don’t Believe us, <br> Check Client Word</h2>
-                    <h5 class="tagline">More over <span class="tag-no">1900+</span> <strong>customer</strong></h5>
-                </div>
-            </div>
-        </div>
-
-        <div class="row align-items-center">
-            <div class="col-md-5">
-                <div class="testimonial-thumbnail mt-sm-5 mt-md-1">
-                    <div class="testimonial-thumbnail-item">
-                        <img src="{{ asset("frontend/assets/img/testimonial/h-2-t-01.png") }}" alt="Businex-Testimonial"/>
-                    </div>
-                    <div class="testimonial-thumbnail-item">
-                        <img src="{{ asset("frontend/assets/img/testimonial/h-2-t-02.png") }}" alt="Businex-Testimonial"/>
-                    </div>
-                    <div class="testimonial-thumbnail-item">
-                        <img src="{{ asset("frontend/assets/img/testimonial/h-2-t-03.png") }}" alt="Businex-Testimonial"/>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-7 ms-auto">
-                <div class="testimonial-area-right">
-                    <div class="section-title d-none d-lg-block">
-                        <h6>TESTIMONIALS</h6>
-                        <h2>What Our Clients Say<br>About Working With Us</h2>
-                        <h5 class="tagline">Featured clients <span class="tag-no">4+</span> <strong>endorsements</strong></h5>
-                    </div>
-
-                    <div class="testimonial-content-wrap pl-0">
-                        <div class="testimonial-content--2">
-                            <!-- Start Testimonial Item -->
-                            <div class="testimonial-item testimonial-item--2">
-                                <div class="testimonial-txt">
-                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
-                                    <p>“Give them a concept, they will always create a good story out of it.”</p>
-                                    <h5 class="client-name">Dan Joshua Oduor, <span class="designation">Founder & Director, Stawisha Africa Initiative</span></h5>
-                                </div>
-                            </div>
-                            <!-- End Testimonial Item -->
-
-                            <!-- Start Testimonial Item -->
-                            <div class="testimonial-item testimonial-item--2">
-                                <div class="testimonial-txt">
-                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
-                                    <p>“The team pays attention to detail … We were satisfied by the excellent work and how they conducted themselves from inception to project completion.”</p>
-                                    <h5 class="client-name">Rachel Kalera‑Mhango, <span class="designation">Communications & Media Engagement Officer, Urgent Action Fund – Africa</span></h5>
-                                </div>
-                            </div>
-                            <!-- End Testimonial Item -->
-
-                            <!-- Start Testimonial Item -->
-                            <div class="testimonial-item testimonial-item--2">
-                                <div class="testimonial-txt">
-                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
-                                    <p>“They demonstrated professionalism and experience … observed timelines and are always willing to do extra to ensure they have the best outcome.”</p>
-                                    <h5 class="client-name">Hillary Omondi, <span class="designation">Coordinator, Siaya Muungano Network</span></h5>
-                                </div>
-                            </div>
-                            <!-- End Testimonial Item -->
-
-                            <!-- Start Testimonial Item -->
-                            <div class="testimonial-item testimonial-item--2">
-                                <div class="testimonial-txt">
-                                    <img src="{{ asset("frontend/assets/img/icons/quote.png") }}" alt="Quote"/>
-                                    <p>“They have been responsible for handling the photography and graphic design aspects of all our projects..., they have consistently been of the highest caliber.”</p>
-                                    <h5 class="client-name">Joseph Odindo Lare, <span class="designation">COO, Givewatts</span></h5>
-                                </div>
-                            </div>
-                            <!-- End Testimonial Item -->
-                        </div>
-
-                        <div class="testimonial-arrows-2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--== End Testimonial Area Wrapper ==-->
 
 <!--== Start Team Area Wrapper ==-->
 <div class="team-area bg-brand">
@@ -407,9 +199,9 @@
             <div class="col-xl-4">
             <div class="team-area-left text-center text-md-start">
                 <div class="section-title section-title--light mb-0">
-                    <h6>Creative Team</h6>
-                    <h2>Meet Our <br>Dedicated Professionals</h2>
-                    <p><strong>Collines Communications</strong> is powered by a team of passionate, creative, and experienced professionals dedicated to visual storytelling, brand impact, and purpose-driven media solutions.</p>
+                    <h6>Meet the Team</h6>
+                    <h2>Driven by Passion, United by Purpose</h2>
+                    <p><strong>Collines Communications</strong> is built on the strength of a visionary team, committed to telling stories that resonate and strategies that create real impact.</p>
                 </div>
             </div>
         </div>
@@ -417,58 +209,26 @@
         <div class="col-xl-8">
             <div class="team-area-right team-area-right--2 bg-img" data-bg="{{ asset("frontend/assets/img/team/team-bg-2.jpg") }}">
                 <div class="row g-0 align-items-end mtn-40">
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-01.png") }}" alt="Collines Omondi"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Collines Omondi</a></h5>
-                                <span class="designation">Founder & Managing Director</span>
+                    @foreach($teams as $member)
+                        <div class="col-sm-6 col-lg-2">
+                            <div class="team-mem-item team-mem-item--2">
+                                <figure class="member-pic">
+                                    <img style="max-width: 200px; max-height: 409px; object-fit: cover;" src="{{ asset($member->img_src ?? 'frontend/assets/img/team/h-2-01.png') }}" alt="{{ $member->name }}" />
+                                </figure>
+                                <div class="member-info">
+                                    <h5><a href="{{ route('teams.details', $member->slug) }}">{{ $member->name }}</a></h5>
+                                    <span class="designation">{{ $member->title }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-02.png") }}" alt="Anne Kibei"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Anne Kibei</a></h5>
-                                <span class="designation">Digital Media Strategist</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-03.png") }}" alt="Samuel Oduor"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Samuel Oduor</a></h5>
-                                <span class="designation">Lead Cinematographer</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-lg-3">
-                        <div class="team-mem-item team-mem-item--2">
-                            <figure class="member-pic">
-                                <img src="{{ asset("frontend/assets/img/team/h-2-04.png") }}" alt="Samuel Gitau"/>
-                            </figure>
-                            <div class="member-info">
-                                <h5><a href="team.html">Samuel Gitau</a></h5>
-                                <span class="designation">Lead Photographer</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!--== End Team Area Wrapper ==-->
 
 <!--== Start Blog Area Wrapper ==-->
 <div class="blog-area-wrapper sm-top">

@@ -2,20 +2,21 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="src="{{ asset("frontend/assets/img/page-header.jpg") }}">
+<div class="page-header-area bg-img" data-bg="{{ asset('frontend/assets/img/page-header.jpg') }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>BUSINEX TEAM</h2>
-                        <p>Businex always try to provide the best Business Solutions for Clinets
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2>{{ $team->name ?? 'Team Member' }}</h2>
+                        <p>
+                            {{ $team->title ?? 'Part of the creative force behind Collines Comms' }}
+                        </p>
                         <div class="breadcrumb-wrap">
                             <ul class="breadcrumb">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a class="current" href="service-details.html">Member Details</a></li>
+                                <li><a href="{{ route('home') }}">Home</a></li>
+                                <li><a href="{{ route('teams') }}">Team</a></li>
+                                <li><a class="current" href="#">{{ $team->name ?? 'Member Details' }}</a></li>
                             </ul>
                         </div>
                     </div>
@@ -31,6 +32,8 @@
     <div class="member-details-wrapper sm-top">
         <div class="container">
             <div class="member-details-wrap">
+
+            
                 <div class="member-details-top">
                     <div class="row">
                         <div class="col-md-5">
@@ -41,28 +44,36 @@
 
                         <div class="col-md-7 ms-auto">
                             <div class="member-desc">
-                                <h2>Rebeca Luice</h2>
-                                <h5>Creative Designer</h5>
-                                <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                    itate non vident, similique sunt in culpa modi tempora incidunt ut labore et dolor
-                                    am
-                                    aera boluptatum deleniti atque corrupti quosres </p>
-                                <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                    itate non vident, similique sunt in culpa modi tempora incidunt ut labore</p>
+                                <h2>{{ $team->name ?? '' }}</h2>
+                                <h5>{{ $team->title ?? '' }}</h5>
 
-                                <div class="member-social-icons mt-25">
-                                    <a href="#" class="facebook"><i class="mdi mdi-facebook"></i></a>
-                                    <a href="#" class="twitter"><i class="mdi mdi-twitter"></i></a>
-                                    <a href="#" class="linkedin"><i class="mdi mdi-linkedin"></i></a>
-                                    <a href="#" class="reddit"><i class="mdi mdi-reddit"></i></a>
-                                    <a href="#" class="pinterest"><i class="mdi mdi-pinterest"></i></a>
-                                </div>
+                                @isset($team->message)
+                                    <p>{{ $team->message }}</p>
+                                @endisset
+
+                                @isset($team->quote)
+                                    <p><em>"{{ $team->quote }}"</em></p>
+                                @endisset
+
+                                @if (!empty($team->socials))
+                                    <div class="member-social-icons mt-25">
+                                        @foreach($team->socials as $platform => $link)
+                                            @if (!empty($link))
+                                                <a href="{{ $link }}" class="{{ $platform }}" target="_blank">
+                                                    <i class="mdi mdi-{{ $platform }}"></i>
+                                                </a>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                @endif
 
                                 <div class="contact-info mt-25">
-                                    <p><strong>Address</strong> 256 Central Street, Mosque Tower <br> Central City, New
-                                        Yourk</p>
-                                    <p><strong>Phone</strong> +012354 658 987 / +02154 568 987</p>
-                                    <p><strong>Web</strong> mail@yourmail.com / www.yourmail.com</p>
+                                    @if (!empty($team->phone))
+                                        <p><strong>Phone:</strong> {{ $team->phone }}</p>
+                                    @endif
+                                    @if (!empty($team->email))
+                                        <p><strong>Email:</strong> {{ $team->email }}</p>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -74,192 +85,34 @@
                         <div class="col-lg-6">
                             <div class="skill-experience-area mem-achieve-item">
                                 <h4>Skills & Experience</h4>
-                                <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                    itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
-                                    aera boluptatum deleniti corrupti. </p>
 
-                                <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                    itate non vident, simibore et dolor amera boluptatum deleniti corrupti. </p>
-
-                                <div class="skill-bar-wrap">
-                                    <!-- Start Skills Item #1 -->
-                                    <div class="single-skill-bar">
-                                        <div class="skills-info d-flex align-items-center justify-content-between">
-                                            <span class="skill-title">UI</span>
-                                            <span class="skill-percent"></span>
-                                        </div>
-
-                                        <div class="skill-progress progress">
-                                            <div class="progress-bar skill-progress-bar" data-skill-amount="95%"></div>
-                                        </div>
+                                @if (!empty($team->skills))
+                                    <div class="skill-badge-list mb-3">
+                                        @foreach($team->skills as $skill)
+                                            <span class="badge bg-dark text-white me-1 mb-1">{{ $skill }}</span>
+                                        @endforeach
                                     </div>
+                                @endif
 
-                                    <!-- Start Skills Item #2 -->
-                                    <div class="single-skill-bar">
-                                        <div class="skills-info d-flex align-items-center justify-content-between">
-                                            <span class="skill-title">UX</span>
-                                            <span class="skill-percent"></span>
-                                        </div>
-
-                                        <div class="skill-progress progress">
-                                            <div class="progress-bar skill-progress-bar" data-skill-amount="68%"></div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Start Skills Item #3 -->
-                                    <div class="single-skill-bar">
-                                        <div class="skills-info d-flex align-items-center justify-content-between">
-                                            <span class="skill-title">Creative</span>
-                                            <span class="skill-percent"></span>
-                                        </div>
-
-                                        <div class="skill-progress progress">
-                                            <div class="progress-bar skill-progress-bar" data-skill-amount="85%"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @if (!empty($team->experience))
+                                    <p class="mt-3">{{ $team->experience }}</p>
+                                @endif
                             </div>
                         </div>
 
                         <div class="col-lg-6">
-                            <div class="my-history-area mem-achieve-item">
-                                <h4>My History</h4>
-                                <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                    itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
-                                    aera boluptatum deleniti corrupti. </p>
-
-                                <div class="history-content-wrap how-we-works-content">
-                                    <!-- Start Member History Item #1 -->
-                                    <div class="icon-box-item">
-                                        <div class="icon-box__icon">
-                                            <img src="{{ asset("frontend/assets/img/team/details/date-1.png") }}" alt="Businex-History"/>
+                            <div class="member-details-bottom">
+                                        <div class="member-education mem-achieve-item">
+                                            <h4>Education</h4>
+                                            @if (!empty($team->education))
+                                                <p>{{ $team->education }}</p>
+                                            @endif
                                         </div>
-                                        <div class="icon-box__info">
-                                            <h5>Start My Career</h5>
-                                            <p>Voluptatum deleniti atque lorem ipsum use esed et quas molestias
-                                                cepte</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Start Member History Item #2 -->
-                                    <div class="icon-box-item">
-                                        <div class="icon-box__icon">
-                                            <img src="{{ asset("frontend/assets/img/team/details/date-2.png") }}" alt="Businex-History"/>
-                                        </div>
-                                        <div class="icon-box__info">
-                                            <h5>Best Designer Award</h5>
-                                            <p>Voluptatum deleniti atque lorem ipsum use esed et quas molestias
-                                                cepte</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Start Member History Item #3 -->
-                                    <div class="icon-box-item">
-                                        <div class="icon-box__icon">
-                                            <img src="{{ asset("frontend/assets/img/team/details/date-3.png") }}" alt="Businex-History"/>
-                                        </div>
-                                        <div class="icon-box__info">
-                                            <h5>Most Seller Award</h5>
-                                            <p>Voluptatum deleniti atque lorem ipsum use esed et quas molestias
-                                                cepte</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="member-details-bottom sm-top-wt">
-                    <div class="row mtn-50">
-                        <div class="col-xl-6 m-auto text-center">
-                            <div class="member-education mem-achieve-item">
-                                <h4>Education</h4>
-                                <p>Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
-                                    itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
-                                    aera boluptatum deleniti corrupti.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="cd-timeline-wrap">
-                                <div class="cd-timeline">
-                                    <!-- Start Education Item #01 -->
-                                    <div class="cd-timeline-block">
-                                        <div class="cd-timeline-img">
-                                            <span class="dot"></span>
-                                        </div>
-
-                                        <div class="cd-timeline-content">
-                                            <div class="cd-heading">
-                                                <h5>Bachelor in Graphics</h5>
-                                                <p>JAN 2013 - MAY 2016 | <span>University of Manchester</span></p>
-                                            </div>
-                                            <p class="cd-description">Businex boluptatum deleniti atque corrupti
-                                                quosres et quas molestias cepturi sint eca itate non vident, similique
-                                                suntculpa modi tempora incidunt ut labore et dolor am aera boluptatum
-                                                deleniti corrupti.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Start Education Item #02 -->
-                                    <div class="cd-timeline-block">
-                                        <div class="cd-timeline-img">
-                                            <span class="dot"></span>
-                                        </div>
-
-                                        <div class="cd-timeline-content">
-                                            <div class="cd-heading">
-                                                <h5>Diploma in Arts</h5>
-                                                <p>JAN 2010 - DEC 2012 | <span>University of Community</span></p>
-                                            </div>
-                                            <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres
-                                                et quas molestias
-                                                cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Start Education Item #03 -->
-                                    <div class="cd-timeline-block">
-                                        <div class="cd-timeline-img">
-                                            <span class="dot"></span>
-                                        </div>
-
-                                        <div class="cd-timeline-content">
-                                            <div class="cd-heading">
-                                                <h5>Diploma in Communication</h5>
-                                                <p>JAN 2007 - Jan 2008 | <span>University of Community</span></p>
-                                            </div>
-                                            <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres
-                                                et quas molestias
-                                                cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Start Education Item #04 -->
-                                    <div class="cd-timeline-block">
-                                        <div class="cd-timeline-img">
-                                            <span class="dot"></span>
-                                        </div>
-
-                                        <div class="cd-timeline-content">
-                                            <div class="cd-heading">
-                                                <h5>Diploma in Computer</h5>
-                                                <p>JAN 2007 - Jan 2008 | <span>University of Community</span></p>
-                                            </div>
-                                            <p class="cd-description">Businex boluptatum deleniti atque corrupti quosres
-                                                et quas molestias
-                                                cepturi sint eca itate non vident, similique suntculpa modi tempora
-                                                incidunt ut labore et dolor am aera boluptatum deleniti corrupti.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
