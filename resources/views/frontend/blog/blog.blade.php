@@ -2,14 +2,16 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="{{ asset('frontend/assets/img/page-header.jpg') }}">
-    <div class="container">
+<div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/banner.jpg') }}'); position: relative;">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>Insights & Stories</h2>
-                        <p>Explore perspectives from the Collines Comms team — from content strategy to media trends and storytelling tips that inspire impact-driven communication.</p>
+                        <h2 style="color: #fff;"> Insights & Stories </h2>
+                        <p style="color: #eee;">Explore perspectives from the Collines Comms team — from content strategy to media trends and storytelling tips that inspire impact-driven communication.</p>
                     </div>
                 </div>
             </div>

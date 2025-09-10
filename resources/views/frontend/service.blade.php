@@ -2,14 +2,16 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="{{ asset("frontend/assets/img/page-header.jpg") }}">
-    <div class="container">
+<div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/banner.jpg') }}'); position: relative;">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>VISUAL COMMUNICATION THAT CONNECTS</h2>
-                        <p>From photography and video to branding and campaigns, we help individuals and organizations tell stories that resonate, inspire, and elevate.</p>
+                        <h2 style="color: #fff;"> VISUAL COMMUNICATION THAT CONNECTS </h2>
+                        <p style="color: #eee;">From photography and video to branding and campaigns, we help individuals and organizations tell stories that resonate, inspire, and elevate.</p>
                     </div>
                 </div>
             </div>
@@ -32,7 +34,7 @@
 
             <div class="col-md-6 col-lg-5 order-0 order-md-1">
                 <figure class="about-thumb">
-                    <img src="{{ asset("frontend/assets/img/about.jpg") }}" alt="About Collines Communications"/>
+                    <img src="{{ asset("frontend/assets/new/about-service.jpeg") }}" alt="About Collines Communications"/>
                 </figure>
             </div>
         </div>
@@ -48,7 +50,7 @@
                 <div class="col-lg-6 col-xl-5 m-auto text-center">
                     <div class="section-title section-title--light">
                         <h6>OUR SERVICES</h6>
-                        <h2 class="mb-0">We make it simple, providing best solutions</h2>
+                        <p class="mb-0">At Collines Comms, we believe every moment tells a story worth remembering. Our photography and videography services are designed to capture raw emotions, authentic experiences, and timeless memories.</p>
                     </div>
                 </div>
             </div>
@@ -64,7 +66,7 @@
                         <div class="service-item">
                             <figure class="service-thumb">
                                 <a href="{{ route('services.details', $service->slug) }}">
-                                    <img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="{{ $service->title }}"/>
+                                    <img src="{{ asset($service->pic) }}" alt="{{ $service->title }}"/>
                                 </a>
                                 <figcaption class="service-txt">
                                     <h5>{{ $service->title }}</h5>
@@ -96,7 +98,7 @@
 <!--== End Service Area Wrapper ==-->
 
 <!--== Start Pricing Table Area  ==-->
-<div class="pricing-plan-area sm-top">
+<!-- <div class="pricing-plan-area sm-top">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -277,7 +279,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--== End Pricing Table Area  ==-->
 
 <!--== Start Testimonial Area Wrapper ==-->
@@ -297,13 +299,13 @@
             <div class="col-md-5">
                 <div class="testimonial-thumbnail mt-sm-5 mt-md-1">
                     <div class="testimonial-thumbnail-item">
-                        <img src="{{ asset("frontend/assets/img/testimonial/h-2-t-01.png") }}" alt="Businex-Testimonial"/>
+                        <img src="{{ asset("frontend/assets/new/testi.jpeg") }}" alt="Businex-Testimonial"/>
                     </div>
                     <div class="testimonial-thumbnail-item">
-                        <img src="{{ asset("frontend/assets/img/testimonial/h-2-t-02.png") }}" alt="Businex-Testimonial"/>
+                        <img src="{{ asset("frontend/assets/new/testi.jpeg") }}" alt="Businex-Testimonial"/>
                     </div>
                     <div class="testimonial-thumbnail-item">
-                        <img src="{{ asset("frontend/assets/img/testimonial/h-2-t-03.png") }}" alt="Businex-Testimonial"/>
+                        <img src="{{ asset("frontend/assets/new/testi.jpeg") }}" alt="Businex-Testimonial"/>
                     </div>
                 </div>
             </div>
@@ -374,33 +376,87 @@
         <div class="row">
             <div class="col-12">
                 <div class="brand-logo-content slick-row-20">
+
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/01.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/GiveWatts-logo-Collines-Communications-Concept-client.png') }}" alt="GiveWatts Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/02.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Good-Kenyan-logo-Collines-Communications-Concept-client.png') }}" alt="Good Kenyan Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/03.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Hand-in-Hand-logo-Collines-Communications-Concept-client.png') }}" alt="Hand in Hand Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/04.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Urgent-Action-Fund-Africa-logo-Collines-Communications-Concept-Client.png') }}" alt="Urgent Action Fund Africa Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/05.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Network-for-Ecofarming-in-Africa-logo-Collines-Communications-Concept-client.png') }}" alt="Network for Ecofarming in Africa Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/03.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/01.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Winnie-Rohi-Co-Advocates-logo-Collines-Communications-Concept-client.png') }}" alt="Winnie Rohi Co Advocates Logo"/></a>
                     </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Utmost-Precision-logo-Collines-Communications-Concept-client.png') }}" alt="Utmost Precision Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/The-Master-Green-Organic-Foods-Collines-Communications-Concept-client.png') }}" alt="The Master Green Organic Foods Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Tahmo-logo-Collines-Communications-Concept-client.png') }}" alt="Tahmo Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Serv-International-logo-Collines-Communications-Concept-client.png') }}" alt="Serv International Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Samaritans-logo-Collines-Communications-Concept-client.png') }}" alt="Samaritans Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Premier-Academy-logo-Collines-Communications-Concept-client.png') }}" alt="Premier Academy Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/NAYA-logo-Collines-Communications-Concept-client.png') }}" alt="NAYA Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/MP-Shah-Hospital-logo-Collines-Communications-Concept-client.png') }}" alt="MP Shah Hospital Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Metis-logo-Collines-Communications-Concept-client.png') }}" alt="Metis Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Lactone-Investments-logo-Collines-Communications-Concept-client.png') }}" alt="Lactone Investments Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kodera-Greenhouses-logo-Collines-Communications-Concept-client.png') }}" alt="Kodera Greenhouses Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kotra-logo-Collines-Communications-Concept-client.png') }}" alt="Kotra Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kenya-National-Bureue-Of-Statistics-logo-Collines-Communications-Concept-client.png') }}" alt="Kenya National Bureau Of Statistics Logo"/></a>
+                    </div>
+
                 </div>
             </div>
         </div>

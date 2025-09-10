@@ -2,14 +2,16 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="{{ asset("frontend/assets/img/page-header.jpg") }}">
-    <div class="container">
+<div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/banner.jpg') }}'); position: relative;">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>OUR SERVICES</h2>
-                        <p>At Collines Communications, we craft authentic, visually compelling content — from photography and film to branding and digital campaigns — tailored to resonate with your audience.</p>
+                        <h2 style="color: #fff;"> OUR SERVICES </h2>
+                        <p style="color: #eee;">At Collines Communications, we craft authentic, visually compelling content — from photography and film to branding and digital campaigns — tailored to resonate with your audience.</p>
                         <div class="breadcrumb-wrap">
                             <ul class="breadcrumb">
                                 <li><a href="{{ url('/') }}">Home</a></li>
@@ -33,9 +35,11 @@
                 <div class="col-lg-8">
                     <div class="service-details-content">
                         <figure class="service-details-thumb">
-                            <img src="{{ asset("frontend/assets/img/service/details/01.jpg") }}" alt="Businex-Service Details"/>
-                            <img src="{{ asset("frontend/assets/img/service/details/02.jpg") }}" alt="Businex-Service Details"/>
-                            <img src="{{ asset("frontend/assets/img/service/details/03.jpg") }}" alt="Businex-Service Details"/>
+                            @if (!empty($service->pics))
+                                @foreach ($service->pics as $pic)
+                                    <img src="{{ asset($pic) }}" alt="{{ $service->title }}"/>
+                                @endforeach
+                            @endif
                         </figure>
                         <div class="service-details-info">
                             <h3>{{ $service->title }}</h3>
@@ -102,46 +106,6 @@
     </div>
 </div>
 <!--== End Page Content Area Wrapper ==-->
-
-<!--== Start Brand Logo Area Wrapper ==-->
-<div class="brand-logo-area sm-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="brand-logo-content slick-row-20">
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/01.png") }}" alt="Businex-Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/02.png") }}" alt="Businex-Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/03.png") }}" alt="Businex-Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/04.png") }}" alt="Businex-Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/05.png") }}" alt="Businex-Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/03.png") }}" alt="Businex-Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/01.png") }}" alt="Businex-Logo"/></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--== End Brand Logo Area Wrapper ==-->
 
 <!--== Start Fun Fact Area Wrapper ==-->
 <div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">

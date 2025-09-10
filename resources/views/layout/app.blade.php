@@ -9,7 +9,7 @@
     <title>{{ config('app.name') }}</title>
 
     <!--== Favicon ==-->
-    <link rel="shortcut icon" href="{{ asset("frontend/assets/img/favicon.ico")}}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset("frontend/assets/logo.png")}}" type="image/x-icon"/>
 
     <!--== Google Fonts ==-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +43,23 @@
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+    .nav-pills .nav-link.active {
+        background-color: #CC5200 !important;
+        color: #fff !important;
+    }
+    .nav-pills .nav-link:hover {
+        color: #CC5200;
+    }
+    .portfolio-content a {
+        text-decoration: none;
+    }
+
+    .pop-heading {
+        font-family: 'Poppins', sans-serif;
+        color: #ff7b00 !important; /* strong orange */
+    }
+    </style>
 </head>
 
 <body>
@@ -54,18 +71,18 @@
             <div class="col-5 col-lg-2">
                 <!-- Start Logo Area -->
                 <div class="logo-area">
-                    <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/logo.jpg") }}" alt="collines-Logo"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/logo.png") }}" alt="collines-Logo"></a>
                 </div>
                 <!-- End Logo Area -->
             </div>
 
-            <div class="col-lg-7 d-none d-lg-block">
+            <div class="col-lg-8 d-none d-lg-block">
                 <!-- Start Navigation Area -->
                 <div class="navigation-area">
                 <ul class="main-menu nav">
-                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <!-- <li><a href="{{ route('home') }}">Home</a></li> -->
 
-                    <li class="has-submenu"><a href="#">Pages</a>
+                    <!-- <li class="has-submenu"><a href="#">Pages</a>
                         <ul class="submenu-nav submenu-nav-mega">
                             <li class="mega-menu-item">
                                 <ul>
@@ -81,9 +98,9 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
 
-                    <li class="has-submenu"><a href="{{ route('services') }}">Service</a>
+                    <!-- <li class="has-submenu"><a href="{{ route('services') }}">Service</a>
                         <ul class="submenu-nav">
                             <li><a href="{{ route('services') }}">Service</a></li>
                         </ul>
@@ -93,24 +110,44 @@
                         <ul class="submenu-nav">
                             <li><a href="{{ route('teams') }}">Team</a></li>
                         </ul>
-                    </li>
+                    </li> -->
 
-                    <li><a href="{{ route('blogs.index') }}">Blog</a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><a href="{{ route('about') }}">Our Story</a></li>
+                    <li><a href="{{ route('services') }}">What We Do</a></li>
+                    <li><a href="{{ route('teams') }}">Teams</a></li>
+                    <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
                     <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
                 </div>
                 <!-- End Navigation Area -->
             </div>
 
-            <div class="col-7 col-lg-3">
+            <div class="col-7 col-lg-2">
                 <!-- Start Header Action Area -->
                 <div class="header-action text-end">
-                    <a href="tel:+254728312251" class="tel-no">+254728312251</a>
-                    <button class="btn-cog"><i class="fa fa-cog"></i></button>
-                    <button class="btn-menu d-lg-none"><i class="fa fa-bars"></i></button>
+                    <div class="member-social-icons ms-3">
+                        <a href="https://instagram.com/collinescomms" target="_blank" rel="noopener">
+                            <i class="mdi mdi-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/CollinesComms" target="_blank" rel="noopener">
+                            <i class="mdi mdi-twitter"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@collinescomms" target="_blank" rel="noopener">
+                            <i class="mdi mdi-youtube"></i>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" rel="noopener">
+                            <i class="mdi mdi-whatsapp"></i>
+                        </a>
+                        <a href="mailto:info@collinecommunications.com" target="_blank" rel="noopener">
+                            <i class="mdi mdi-email"></i>
+                        </a>
+                    </div>
+                    <a href="tel:+254728312251" class="tel-no">0728312251</a>
                 </div>
                 <!-- End Header Action Area -->
             </div>
+            
         </div>
     </div>
 </header>
@@ -119,89 +156,80 @@
 @yield('content')
 
 <!--== Start Footer Area Wrapper ==-->
-<footer class="footer-area sp-y">
+<footer class="footer-area sp-y" style="background:#cc5200; color:#fff;">
     <div class="footer-top-wrap">
         <div class="container">
             <div class="footer-top-content">
                 <div class="row align-items-center">
                     <div class="col-md-8 col-lg-6">
-                        <h2>Ready to Tell Your Story?</h2>
-                        <p>Partner with us to create visuals that resonate, inspire, and connect — locally and globally.</p>
+                        <h2 style="color:#fff;">Ready to Tell Your Story?</h2>
+                        <p style="color:#fff;">Partner with us to create visuals that resonate, inspire, and connect — locally and globally.</p>
                     </div>
                     <div class="col-md-4 col-lg-6 text-md-end mt-sm-25">
-                        <a href="{{ route('contact') }}" class="btn-outline">Book a Consultation</a>
+                        <a href="{{ route('contact') }}" class="btn-outline" style="color:#fff;">Book a Consultation</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="footer-widget-area sm-top-wt">
-        <div class="container">
-            <div class="row mtn-40">
-                <div class="col-lg-4 order-4 order-lg-0">
-                    <div class="widget-item">
-                        <div class="about-widget">
-                            <a href="index.html"><img src="frontend/assets/logo.jpg" alt="Logo"/></a>
-                            <p>Collines Communications is a visual storytelling studio helping brands and individuals share powerful, authentic narratives across Kenya and beyond.</p>
-
-                            <div class="copyright-txt">
-                                <p>&copy;
-                                    <script>
-                                        document.write(new Date().getFullYear())
-                                    </script>
-                                    {{ config('app.name') }}. All Rights Reserved.
-                                </p>
-                            </div>
-                        </div>
+    <div class="footer-widget-area py-5" style="background:#cc5200; color:#fff;">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Section -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="d-flex flex-column">
+                    <div class="mb-3">
+                        <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:150px;"/></a>
                     </div>
+                    <p>
+                        Collines Communications is a visual storytelling studio helping brands and individuals
+                        share powerful, authentic narratives across Kenya and beyond.
+                    </p>
+                    <p class="mb-0">
+                        &copy; <script>document.write(new Date().getFullYear())</script> {{ config('app.name') }}. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Section -->
+            <div class="col-lg-6 text-lg-end">
+                <!-- Quick Links -->
+                <div class="mb-3">
+                    <a href="{{ route('about') }}" class="text-white me-3">Our Company</a>
+                    <a href="{{ route('services') }}" class="text-white me-3">Our Services</a>
+                    <a href="{{ route('contact') }}" class="text-white">Contact Us</a>
                 </div>
 
-                <div class="col-md-4 col-lg-2 ms-auto">
-                    <div class="widget-item">
-                        <h4 class="widget-title">Information</h4>
-                        <div class="widget-body">
-                            <ul class="widget-list">
-                                <li><a href="{{ route('about') }}">Our company</a></li>
-                                <li><a href="{{ route('contact') }}">Contact us</a></li>
-                                <li><a href="{{ route('services') }}">Our services</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <!-- Social Icons -->
+                <div class="d-flex justify-content-lg-end justify-content-start mb-3">
+                    <a href="https://instagram.com/collinescomms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                        <i class="mdi mdi-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/CollinesComms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                        <i class="mdi mdi-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@collinescomms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                        <i class="mdi mdi-youtube"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                        <i class="mdi mdi-whatsapp"></i>
+                    </a>
+                    <a href="mailto:info@collinecommunications.com" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark" style="width:36px; height:36px;">
+                        <i class="mdi mdi-email"></i>
+                    </a>
                 </div>
 
-                <div class="col-md-4 col-lg-2 ms-auto">
-                    <div class="widget-item">
-                        <h4 class="widget-title">Quick Links</h4>
-                        <div class="widget-body">
-                            <ul class="widget-list">
-                                <li><a href="https://instagram.com/collinescomms" target="_blank" rel="noopener">Instagram</a></li>
-                                <li><a href="https://twitter.com/CollinesComms" target="_blank" rel="noopener">X (Twitter)</a></li>
-                                <li><a href="https://www.youtube.com/@collinescomms" target="_blank" rel="noopener">YouTube</a></li>
-                                <li><a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" rel="noopener">WhatsApp</a></li>
-                                <li><a href="mailto:info@collinecommunications.com" target="_blank" rel="noopener">Email</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-lg-3">
-                    <div class="widget-item">
-                        <h4 class="widget-title">Contact</h4>
-                        <div class="widget-body">
-                            <address>
-                                    Nairobi, Kenya
-                                    <br>
-                                    info@collinecommunication.com
-                                    <br>
-                                    (+254) 728312251
-                            </address>
-                        </div>
-                    </div>
+                <!-- Contact Info -->
+                <div>
+                    <p class="mb-1">Nairobi, Kenya</p>
+                    <p class="mb-1">info@collinecommunication.com</p>
+                    <p class="mb-0">0728 312 251</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </footer>
 <!--== End Footer Area Wrapper ==-->
 

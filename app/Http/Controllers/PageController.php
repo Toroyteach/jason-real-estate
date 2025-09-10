@@ -52,6 +52,11 @@ class PageController extends Controller
         $json = Storage::get('services.json');
         return json_decode($json);
     }
+
+    public function portfolio()
+    {
+        return view('frontend.portfolio');
+    }
     
     public function teams()
     {

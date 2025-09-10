@@ -16,6 +16,7 @@ Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/services/{slug}', [PageController::class, 'serviceDetails'])->name('services.details');
+Route::get('/portfolio', [PageController::class, 'portfolio'])->name('portfolio');
 Route::get('/teams', [PageController::class, 'teams'])->name('teams');
 Route::get('/teams/{slug}', [PageController::class, 'teamDetails'])->name('teams.details');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact');

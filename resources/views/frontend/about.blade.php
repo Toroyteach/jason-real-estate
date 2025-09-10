@@ -11,9 +11,11 @@
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2 style="color: #fff;">KNOW ABOUT BUSINEX THE ULTIMATE TEAM</h2>
-                        <p style="color: #eee;">Businex always try to provide the best Business Solutions for Clients
-                            to grow up their Business very sharply and smoothly.</p>
+                        <h2 style="color: #fff;">ABOUT COLLINES COMMUNICATIONS</h2>
+                        <p style="color: #eee;">We are a visual communications studio telling stories that connect
+                            brands with people. Since 2010, we’ve specialized in video, photography, design,
+                            digital marketing, and strategy—helping individuals and brands share authentic,
+                            purpose-driven narratives across East Africa and beyond.</p>
                     </div>
                 </div>
             </div>
@@ -23,50 +25,77 @@
 <!--== End Page Header Area ==-->
 
 <!--== Start About Area Wrapper ==-->
-<div class="home-two-about-area">
+<div class=" py-5">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 d-lg-none">
-                <figure class="about-thumb">
-                    <img src="{{ asset("frontend/assets/img/about-2.jpg") }}" alt="Collines Communications About"/>
-                </figure>
-            </div>
-
-            <div class="col-lg-10">
+            
+            <!-- Text Section -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="about-content about-content--2">
-                    <h6>ABOUT US</h6>
-                    <h2>Our Story</h2>
-                    <span class="about-since">Since 2010</span>
-
-                    <p>
-                        Collines communications began with a simple belief that every person and brands have a story worth sharing.
+                    <h6 class="text-uppercase fw-bold mb-3">ABOUT US</h6>
+                    <h2 class="fw-bold mb-3">Our Story</h2>
+                    <span class="about-since d-inline-block mb-4 text-muted fst-italic">Since 2010</span>
+                    
+                    <p class="mb-3">
+                        Collines Communications began with a simple belief that every person and brand has a story worth sharing. Founded by a team of visual storytellers with backgrounds in photojournalism, commercial production, and communication strategy, we started as a passion project to tell human stories across Kenya. Over time, we evolved into a full-service visual communications studio, blending artistic direction with technical precision and purpose-driven messaging.
+                    </p>
+                    
+                    <p class="mb-3">
+                        Based in Ongata Rongai, Kenya, our mission is to understand what you do and guide you in telling your story to your target clients and markets. We pride ourselves on excellent customer service, helping you with long-term project goals through videos, photos, animations, audio, graphics, websites, digital marketing, and print media.
                     </p>
 
-                    <p>
-                        Founded by a team of visual storytellers with backgrounds in photojournalism, commercial production, and communication strategy, Collines Communications began as a passion project to telling human stories across Kenya.
+                    <p class="mb-3">
+                        With roots in creative thinking, filmmaking, photography, graphic design, web development, and digital marketing, we tailor each project to reflect authenticity, purpose, and local context — creating visuals that resonate in East Africa and beyond.
                     </p>
 
-                    <p>
-                        Over time, we evolved into a full-service visual communications studio, blending artistic direction with technical precision and purpose-driven messaging.
+                    <p class="mb-4">
+                        We have helped small businesses, entrepreneurs, and large corporate clients tell their stories to the world, powered by our dedicated team of young and creative thinkers.
                     </p>
 
-                    <p>
-                        We are based in Ongata Rongai. Kenya, and our business is understanding what you do and helping guide you through telling your stories to your target clients or markets.
-                    </p>
-
-                    <p>
-                        We pride ourselves on great customer service, which entails helping you with your long-term project goals through videos, photos, animations, audio, graphics, websites, digital marketing and print media.
-                    </p>
-
-                    <p>
-                        With roots in creative thinking, filmmaking, photography, graphic designing, web developing, & digital marketing, we tailor each project to reflect authenticity, purpose, and local context which is basically creating visuals that resonate in east Africa and beyond.
-                    </p>
-
-                    <p>
-                        We have helped different small businesses and entrepreneurs to a diverse range of large corporate clients to tell their stories to the world with the help of our dedicated team of young and creative thinkers.
-                    </p>
+                    <!-- Highlighted Points -->
+                    <div class="row g-3">
+                        <div class="col-6 col-md-4">
+                            <div class="p-3 bg-light rounded-3 shadow-sm text-center h-100">
+                                <h6 class="fw-bold mb-1">Creativity</h6>
+                                <small class="text-muted">Rooted in storytelling</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4">
+                            <div class="p-3 bg-light rounded-3 shadow-sm text-center h-100">
+                                <h6 class="fw-bold mb-1">Experience</h6>
+                                <small class="text-muted">Since 2010</small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="p-3 bg-light rounded-3 shadow-sm text-center h-100">
+                                <h6 class="fw-bold mb-1">Impact</h6>
+                                <small class="text-muted">East Africa & beyond</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Image Carousel Section -->
+            <div class="col-lg-6">
+                <div id="storyCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner rounded shadow">
+                        <div class="carousel-item active">
+                            <img src="{{ asset('frontend/assets/new/service-team-1.jpeg') }}" class="d-block" alt="Our Story">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ asset('frontend/assets/new/service-team-2.jpeg') }}" class="d-block" alt="Our Story">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#storyCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#storyCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -80,7 +109,7 @@
                 <div class="col-lg-6 col-xl-5 m-auto text-center">
                     <div class="section-title section-title--light">
                         <h6>OUR SERVICES</h6>
-                        <h2 class="mb-0">We make it simple, providing best solutions</h2>
+                        <p class="mb-0">At Collines Comms, we believe every moment tells a story worth remembering. Our photography and videography services are designed to capture raw emotions, authentic experiences, and timeless memories.</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +125,7 @@
                         <div class="service-item">
                             <figure class="service-thumb">
                                 <a href="{{ route('services.details', $service->slug) }}">
-                                    <img src="{{ asset("frontend/assets/img/service/01.jpg") }}" alt="{{ $service->title }}"/>
+                                    <img src="{{ asset($service->pic) }}" alt="{{ $service->title }}"/>
                                 </a>
                                 <figcaption class="service-txt">
                                     <h5>{{ $service->title }}</h5>
@@ -133,14 +162,14 @@
         <!-- Our Mission -->
         <div class="row mb-5">
             <div class="col-12">
-                <div class="icon-box-item text-center">
+                <div class="text-center">
                     <div class="icon-box__icon mb-3">
                         <img src="{{ asset("frontend/assets/img/feature/01.png") }}" alt="Mission Icon" />
                     </div>
                     <div class="icon-box__info">
                         <h4>Our Mission</h4>
                         <p>
-                            To empower individuals, organizations, and brands by crafting authentic, visually compelling content that captures essence, builds trust, amplifies your message and connects audiences.
+                        To empower individuals, organizations, and brands by crafting authentic, visually compelling content that captures essence, builds trust, amplifies your message and connects audiences.
                         </p>
                     </div>
                 </div>
@@ -209,7 +238,7 @@
                         <div class="col-sm-6 col-lg-2">
                             <div class="team-mem-item team-mem-item--2">
                                 <figure class="member-pic">
-                                    <img src="{{ asset("frontend/assets/img/team/h-2-01.png") }}" alt="Collines Omondi"/>
+                                    <img style="max-width: 200px; max-height: 409px; object-fit: cover;" src="{{ asset($member->img_src ?? 'frontend/assets/img/team/h-2-01.png') }}" alt="{{ $member->name }}" />
                                 </figure>
                                 <div class="member-info">
                                     <h5><a href="{{ route('teams.details', $member->slug) }}">{{ $member->name }}</a></h5>
@@ -223,7 +252,6 @@
         </div>
     </div>
 </div>
-
 <!--== End Team Area Wrapper ==-->
 
 <!--== Start History Area Wrapper ==-->
@@ -288,33 +316,87 @@
         <div class="row">
             <div class="col-12">
                 <div class="brand-logo-content slick-row-20">
+
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/01.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/GiveWatts-logo-Collines-Communications-Concept-client.png') }}" alt="GiveWatts Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/02.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Good-Kenyan-logo-Collines-Communications-Concept-client.png') }}" alt="Good Kenyan Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/03.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Hand-in-Hand-logo-Collines-Communications-Concept-client.png') }}" alt="Hand in Hand Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/04.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Urgent-Action-Fund-Africa-logo-Collines-Communications-Concept-Client.png') }}" alt="Urgent Action Fund Africa Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/05.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Network-for-Ecofarming-in-Africa-logo-Collines-Communications-Concept-client.png') }}" alt="Network for Ecofarming in Africa Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/03.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset("frontend/assets/img/brand-logo/01.png") }}" alt="Businex-Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Winnie-Rohi-Co-Advocates-logo-Collines-Communications-Concept-client.png') }}" alt="Winnie Rohi Co Advocates Logo"/></a>
                     </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Utmost-Precision-logo-Collines-Communications-Concept-client.png') }}" alt="Utmost Precision Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/The-Master-Green-Organic-Foods-Collines-Communications-Concept-client.png') }}" alt="The Master Green Organic Foods Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Tahmo-logo-Collines-Communications-Concept-client.png') }}" alt="Tahmo Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Serv-International-logo-Collines-Communications-Concept-client.png') }}" alt="Serv International Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Samaritans-logo-Collines-Communications-Concept-client.png') }}" alt="Samaritans Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Premier-Academy-logo-Collines-Communications-Concept-client.png') }}" alt="Premier Academy Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/NAYA-logo-Collines-Communications-Concept-client.png') }}" alt="NAYA Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/MP-Shah-Hospital-logo-Collines-Communications-Concept-client.png') }}" alt="MP Shah Hospital Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Metis-logo-Collines-Communications-Concept-client.png') }}" alt="Metis Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Lactone-Investments-logo-Collines-Communications-Concept-client.png') }}" alt="Lactone Investments Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kodera-Greenhouses-logo-Collines-Communications-Concept-client.png') }}" alt="Kodera Greenhouses Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kotra-logo-Collines-Communications-Concept-client.png') }}" alt="Kotra Logo"/></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kenya-National-Bureue-Of-Statistics-logo-Collines-Communications-Concept-client.png') }}" alt="Kenya National Bureau Of Statistics Logo"/></a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -323,7 +405,7 @@
 <!--== End Brand Logo Area Wrapper ==-->
 
 <!--== Start Fun Fact Area Wrapper ==-->
-<div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">
+<!-- <div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">
     <div class="container">
         <div class="row mtn-40">
             <div class="col-6 col-md-3 text-center">
@@ -356,7 +438,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--== End Fun Fact Area Wrapper ==-->
 
 @endsection

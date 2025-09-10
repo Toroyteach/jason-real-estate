@@ -2,14 +2,16 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" data-bg="{{ asset('frontend/assets/img/page-header.jpg') }}">
-    <div class="container">
+<div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/banner.jpg') }}'); position: relative;">
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
+
+    <div class="container" style="position: relative; z-index: 2;">
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2>{{ $blog->title ?? 'Blog Title' }}</h2>
-                        <p>{{ $blog->excerpt ?? Str::limit(strip_tags($blog->content), 150) }}</p>
+                        <h2 style="color: #fff;"> {{ $blog->title ?? 'Blog Title' }} </h2>
+                        <p style="color: #eee;">{{ $blog->excerpt ?? Str::limit(strip_tags($blog->content), 150) }}</p>
                         <div class="breadcrumb-wrap">
                             <ul class="breadcrumb">
                                 <li><a href="{{ route('home') }}">Home</a></li>
