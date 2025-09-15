@@ -37,7 +37,7 @@
                          data-type="text" data-responsive_offset="on"
                          data-frames='[{"delay":10,"split":"lines","splitdelay":0.1,"speed":600,"split_direction":"forward","frame":"0","from":"x:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                          data-textAlign="['center']">
-                         Visual Storytelling That Elevates Your Brand
+                         
                     </div>
 
                     <!-- LAYER NR. 2 -->
@@ -50,12 +50,10 @@
                          data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                          data-textAlign="['center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
                          data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                         At Collines Communications, we don’t just take pictures — we craft narratives that resonate across cultures, locally and globally.
-                    <br>Seamless storytelling from intimate moments to high-impact brand campaigns.
                     </div>
 
                     <!-- LAYER NR. 3 -->
-                    <div class="tp-caption Button-Outline-Secondary rev-btn pop-heading" id="slide-27-layer-11"
+                    <!-- <div class="tp-caption Button-Outline-Secondary rev-btn pop-heading" id="slide-27-layer-11"
                          data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
                          data-y="['top','top','top','top']" data-voffset="['490','470','490','475']" data-width="none"
                          data-height="none" data-whitespace="nowrap" data-type="button" data-letterspacing="2"
@@ -64,7 +62,7 @@
                          data-textAlign="['center','center','center','center']" data-paddingtop="[0,0,0,0]"
                          data-paddingright="[40,40,40,30]" data-paddingbottom="[0,0,0,0]"
                          data-paddingleft="[40,40,40,30]">Explore Our Work
-                    </div>
+                    </div> -->
                 </li>
 
                 <!-- SLIDE  -->
@@ -87,7 +85,7 @@
                          data-type="text" data-responsive_offset="on"
                          data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
                          data-textAlign="['center']">
-                         From Moments to Motion — We Bring Stories to Life
+                         Visual Storytelling That Elevates Your Brand
                     </div>
 
                     <!-- LAYER NR. 5 -->
@@ -100,8 +98,8 @@
                          data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
                          data-textAlign="['center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
                          data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                         From scroll-stopping social campaigns to polished corporate profiles, we combine storytelling, aesthetic, and strategy to amplify your voice.
-                    <br>Inspired by design, driven by purpose.
+                         At Collines Communications, we don’t just take pictures — we craft narratives that resonate across cultures, locally and globally.
+                    <br>Seamless storytelling from intimate moments to high-impact brand campaigns.
                     </div>
 
                     <!-- LAYER NR. 6 -->
@@ -416,6 +414,10 @@
                     <div class="brand-logo-item">
                         <a href="#"><img src="{{ asset('frontend/assets/brands/Good-Kenyan-logo-Collines-Communications-Concept-client.png') }}" alt="Good Kenyan Logo"/></a>
                     </div>
+                    
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo"/></a>
+                    </div>
 
                     <div class="brand-logo-item">
                         <a href="#"><img src="{{ asset('frontend/assets/brands/Hand-in-Hand-logo-Collines-Communications-Concept-client.png') }}" alt="Hand in Hand Logo"/></a>
@@ -427,10 +429,6 @@
 
                     <div class="brand-logo-item">
                         <a href="#"><img src="{{ asset('frontend/assets/brands/Network-for-Ecofarming-in-Africa-logo-Collines-Communications-Concept-client.png') }}" alt="Network for Ecofarming in Africa Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">

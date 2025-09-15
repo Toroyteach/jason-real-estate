@@ -38,7 +38,7 @@
                     <div class="row">
                         <div class="col-md-5">
                             <div class="member-pic mb-sm-35">
-                                <img src="{{ asset("frontend/assets/img/team/team-details.jpg") }}" alt="Businex-Team"/>
+                            <img src="{{ asset($team->img_src ?? 'frontend/assets/img/team/default.jpg') }}" alt="{{ $team->name ?? 'Team Member' }}"/>
                             </div>
                         </div>
 

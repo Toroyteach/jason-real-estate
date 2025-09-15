@@ -143,7 +143,7 @@
                             <i class="mdi mdi-email"></i>
                         </a>
                     </div>
-                    <a href="tel:+254728312251" class="tel-no">0728312251</a>
+                    <!-- <a href="tel:+254728312251" class="tel-no">0728312251</a> -->
                 </div>
                 <!-- End Header Action Area -->
             </div>
@@ -157,52 +157,36 @@
 
 <!--== Start Footer Area Wrapper ==-->
 <footer class="footer-area sp-y" style="background:#cc5200; color:#fff;">
-    <div class="footer-top-wrap">
+    <div class="footer-widget-area py-5">
         <div class="container">
-            <div class="footer-top-content">
-                <div class="row align-items-center">
-                    <div class="col-md-8 col-lg-6">
-                        <h2 style="color:#fff;">Ready to Tell Your Story?</h2>
-                        <p style="color:#fff;">Partner with us to create visuals that resonate, inspire, and connect — locally and globally.</p>
-                    </div>
-                    <div class="col-md-4 col-lg-6 text-md-end mt-sm-25">
-                        <a href="{{ route('contact') }}" class="btn-outline" style="color:#fff;">Book a Consultation</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-widget-area py-5" style="background:#cc5200; color:#fff;">
-    <div class="container">
-        <div class="row align-items-center">
-            <!-- Left Section -->
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="d-flex flex-column">
+            <div class="row">
+                <!-- Left Section (Logo + Description) -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
                     <div class="mb-3">
                         <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:150px;"/></a>
                     </div>
-                    <p>
-                        Collines Communications is a visual storytelling studio helping brands and individuals
-                        share powerful, authentic narratives across Kenya and beyond.
-                    </p>
-                    <p class="mb-0">
-                        &copy; <script>document.write(new Date().getFullYear())</script> {{ config('app.name') }}. All Rights Reserved.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Right Section -->
-            <div class="col-lg-6 text-lg-end">
-                <!-- Quick Links -->
-                <div class="mb-3">
-                    <a href="{{ route('about') }}" class="text-white me-3">Our Company</a>
-                    <a href="{{ route('services') }}" class="text-white me-3">Our Services</a>
-                    <a href="{{ route('contact') }}" class="text-white">Contact Us</a>
+                    <p> {{ config('app.name') }}</p>
                 </div>
 
-                <!-- Social Icons -->
-                <div class="d-flex justify-content-lg-end justify-content-start mb-3">
+                <!-- Grid Section 1 -->
+                <div class="col-lg-3 mb-4 mb-lg-0">
+                    <h6 class="text-white">About</h6>
+                        <a href="{{ route('about') }}" class="text-white d-block mb-2">About Us</a>
+                        <a href="{{ route('portfolio') }}" class="text-white d-block mb-2">Portfolio</a>
+                        <a href="{{ route('teams') }}" class="text-white d-block">Our Team</a>
+                    </div>
+                    
+                    <!-- Grid Section 2 -->
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <h6 class="text-white">Resources</h6>
+                        <a href="{{ route('contact') }}" class="text-white d-block">Contact Us</a>
+                        <a href="{{ route('services') }}" class="text-white d-block mb-2">Our Services</a>
+                </div>
+
+                <!-- Grid Section 3 (Social + Subscribe) -->
+                <div class="col-lg-3">
+                    <h6 class="text-white">Follow Us</h6>
+                    <div class="d-flex mb-3">
                     <a href="https://instagram.com/collinescomms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
                         <i class="mdi mdi-instagram"></i>
                     </a>
@@ -218,18 +202,19 @@
                     <a href="mailto:info@collinecommunications.com" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark" style="width:36px; height:36px;">
                         <i class="mdi mdi-email"></i>
                     </a>
+                    </div>
+                        <a href="{{ route('contact') }}" class="btn-outline" style="color:#fff;">Book Consultation</a>
                 </div>
+            </div>
 
-                <!-- Contact Info -->
-                <div>
-                    <p class="mb-1">Nairobi, Kenya</p>
-                    <p class="mb-1">info@collinecommunication.com</p>
-                    <p class="mb-0">0728 312 251</p>
+            <!-- Bottom -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> {{ config('app.name') }}. All Rights Reserved.</p>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </footer>
 <!--== End Footer Area Wrapper ==-->
 

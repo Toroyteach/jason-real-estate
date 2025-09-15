@@ -10,13 +10,7 @@
         <div class="row">
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
-                    <div class="page-header-content">
-                        <h2 style="color: #fff;">ABOUT COLLINES COMMUNICATIONS</h2>
-                        <p style="color: #eee;">We are a visual communications studio telling stories that connect
-                            brands with people. Since 2010, we’ve specialized in video, photography, design,
-                            digital marketing, and strategy—helping individuals and brands share authentic,
-                            purpose-driven narratives across East Africa and beyond.</p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -218,42 +212,6 @@
 </div>
 <!--== End Feature Area Wrapper ==-->
 
-<!--== Start Team Area Wrapper ==-->
-<div class="team-area bg-brand">
-    <div class="row g-0 align-items-center">
-            <div class="col-xl-4">
-            <div class="team-area-left text-center text-md-start">
-                <div class="section-title section-title--light mb-0">
-                    <h6>Meet the Team</h6>
-                    <h2>Driven by Passion, United by Purpose</h2>
-                    <p><strong>Collines Communications</strong> is built on the strength of a visionary team, committed to telling stories that resonate and strategies that create real impact.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-8">
-            <div class="team-area-right team-area-right--2 bg-img" data-bg="{{ asset("frontend/assets/img/team/team-bg-2.jpg") }}">
-                <div class="row g-0 align-items-end mtn-40">
-                    @foreach($teams as $member)
-                        <div class="col-sm-6 col-lg-2">
-                            <div class="team-mem-item team-mem-item--2">
-                                <figure class="member-pic">
-                                    <img style="max-width: 200px; max-height: 409px; object-fit: cover;" src="{{ asset($member->img_src ?? 'frontend/assets/img/team/h-2-01.png') }}" alt="{{ $member->name }}" />
-                                </figure>
-                                <div class="member-info">
-                                    <h5><a href="{{ route('teams.details', $member->slug) }}">{{ $member->name }}</a></h5>
-                                    <span class="designation">{{ $member->title }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--== End Team Area Wrapper ==-->
-
 <!--== Start History Area Wrapper ==-->
 <!-- <div class="history-area bg-offwhite sp-y">
     <div class="container">
@@ -324,6 +282,10 @@
                     <div class="brand-logo-item">
                         <a href="#"><img src="{{ asset('frontend/assets/brands/Good-Kenyan-logo-Collines-Communications-Concept-client.png') }}" alt="Good Kenyan Logo"/></a>
                     </div>
+                    
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo"/></a>
+                    </div>
 
                     <div class="brand-logo-item">
                         <a href="#"><img src="{{ asset('frontend/assets/brands/Hand-in-Hand-logo-Collines-Communications-Concept-client.png') }}" alt="Hand in Hand Logo"/></a>
@@ -335,10 +297,6 @@
 
                     <div class="brand-logo-item">
                         <a href="#"><img src="{{ asset('frontend/assets/brands/Network-for-Ecofarming-in-Africa-logo-Collines-Communications-Concept-client.png') }}" alt="Network for Ecofarming in Africa Logo"/></a>
-                    </div>
-
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo"/></a>
                     </div>
 
                     <div class="brand-logo-item">
