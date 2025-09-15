@@ -163,9 +163,10 @@
                 <!-- Left Section (Logo + Description) -->
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <div class="mb-3">
-                        <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:150px;"/></a>
+                        <!-- <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:150px;"/></a> -->
                     </div>
-                    <p> {{ config('app.name') }}</p>
+                    <h6 class="text-white">Our Work</h6>
+                    <p> Different Induatries. Same Quality Work</p>
                 </div>
 
                 <!-- Grid Section 1 -->

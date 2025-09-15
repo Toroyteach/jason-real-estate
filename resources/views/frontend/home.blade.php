@@ -216,8 +216,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-xl-5 m-auto text-center">
-                    <div class="section-title section-title--light">
-                        <h6>OUR SERVICES</h6>
+                    <div class="section-title" style="color:#fff;">
+                        <h6 style="color:#fff;">OUR SERVICES</h6>
                         <p class="mb-0">At Collines Comms, we believe every moment tells a story worth remembering. Our photography and videography services are designed to capture raw emotions, authentic experiences, and timeless memories.</p>
                     </div>
                 </div>

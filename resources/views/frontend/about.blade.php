@@ -95,75 +95,21 @@
 </div>
 <!--== End About Area Wrapper ==-->
 
-<!--== Start Service Area Wrapper ==-->
-<div class="service-area-wrapper sm-top-wt">
-    <div class="service-area-top parallax" data-parallax-speed="0.75" data-bg="{{ asset("frontend/assets/img/service/service-bg.jpg") }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-5 m-auto text-center">
-                    <div class="section-title section-title--light">
-                        <h6>OUR SERVICES</h6>
-                        <p class="mb-0">At Collines Comms, we believe every moment tells a story worth remembering. Our photography and videography services are designed to capture raw emotions, authentic experiences, and timeless memories.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="service-content-area">
-        <div class="container">
-            <div class="row mtn-30">
-                @forelse ($services as $service)
-                    <div class="col-sm-6 col-lg-4">
-                        <!-- Start Service Item -->
-                        <div class="service-item">
-                            <figure class="service-thumb">
-                                <a href="{{ route('services.details', $service->slug) }}">
-                                    <img src="{{ asset($service->pic) }}" alt="{{ $service->title }}"/>
-                                </a>
-                                <figcaption class="service-txt">
-                                    <h5>{{ $service->title }}</h5>
-                                </figcaption>
-                            </figure>
-                            <div class="service-content">
-                                <div class="service-content-inner">
-                                    <h5>
-                                        <a href="{{ route('services.details', $service->slug) }}" class="stretched-link">
-                                            {{ $service->title }}
-                                        </a>
-                                    </h5>
-                                    <p>{{ \Illuminate\Support\Str::limit($service->description, 100) }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Service Item -->
-                    </div>
-                @empty
-                    <div class="col-12 text-center py-5">
-                        <p class="text-muted">No services available at the moment. Please check back soon.</p>
-                    </div>
-                @endforelse
-            </div>
-        </div>
-    </div>
-
-</div>
-<!--== End Service Area Wrapper ==-->
-
 <!--== Start Feature Area Wrapper ==-->
-<div class="feature-area-wrapper sm-top">
+<div class="feature-area-wrapper sm-top py-5" style="background:#f9f9f9;">
     <div class="container">
         <!-- Our Mission -->
         <div class="row mb-5">
             <div class="col-12">
-                <div class="text-center">
+                <div class="text-center p-4 rounded shadow-sm bg-white" style="transition:0.3s; border-left:5px solid #cc5200;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset("frontend/assets/img/feature/01.png") }}" alt="Mission Icon" />
+                        <img src="{{ asset('frontend/assets/img/feature/01.png') }}" alt="Mission Icon" style="width:70px;"/>
                     </div>
                     <div class="icon-box__info">
-                        <h4>Our Mission</h4>
-                        <p>
-                        To empower individuals, organizations, and brands by crafting authentic, visually compelling content that captures essence, builds trust, amplifies your message and connects audiences.
+                        <h3 class="fw-bold mb-3">Our Mission</h3>
+                        <p class="text-muted" style="font-size:16px; line-height:1.6;">
+                            To empower individuals, organizations, and brands by crafting authentic, visually compelling 
+                            content that captures essence, builds trust, amplifies your message and connects audiences.
                         </p>
                     </div>
                 </div>
@@ -171,39 +117,42 @@
         </div>
 
         <!-- Our Values -->
-        <div class="row mtn-sm-40 mtn-md-5">
+        <div class="row g-4">
+            <!-- Integrity -->
             <div class="col-md-4">
-                <div class="icon-box-item text-center">
+                <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset("frontend/assets/img/feature/02.png") }}" alt="Integrity Icon" />
+                        <img src="{{ asset('frontend/assets/img/feature/02.png') }}" alt="Integrity Icon" style="width:60px;"/>
                     </div>
                     <div class="icon-box__info">
-                        <h5>Integrity</h5>
-                        <p>Truthful storytelling with respect and ethical representation.</p>
+                        <h5 class="fw-bold mb-2">Integrity</h5>
+                        <p class="text-muted">Truthful storytelling with respect and ethical representation.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Innovation -->
             <div class="col-md-4">
-                <div class="icon-box-item text-center">
+                <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset("frontend/assets/img/feature/03.png") }}" alt="Innovation Icon" />
+                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Innovation Icon" style="width:60px;"/>
                     </div>
                     <div class="icon-box__info">
-                        <h5>Innovation</h5>
-                        <p>Combining traditional craft with digital trends.</p>
+                        <h5 class="fw-bold mb-2">Innovation</h5>
+                        <p class="text-muted">Combining traditional craft with digital trends.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Impact -->
             <div class="col-md-4">
-                <div class="icon-box-item text-center">
+                <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset("frontend/assets/img/feature/03.png") }}" alt="Impact Icon" />
+                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Impact Icon" style="width:60px;"/>
                     </div>
                     <div class="icon-box__info">
-                        <h5>Impact</h5>
-                        <p>We create visuals that change perceptions and spark action.</p>
+                        <h5 class="fw-bold mb-2">Impact</h5>
+                        <p class="text-muted">We create visuals that change perceptions and spark action.</p>
                     </div>
                 </div>
             </div>

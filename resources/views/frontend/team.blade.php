@@ -73,7 +73,7 @@
 <!--== End Team Area Wrapper ==-->
 
 <!--== Start Fun Fact Area Wrapper ==-->
-<div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="src="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">
+<!-- <div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="src="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">
     <div class="container">
         <div class="row mtn-40">
             <div class="col-6 col-md-3 text-center">
@@ -106,7 +106,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--== End Fun Fact Area Wrapper ==-->
 
 @endsection
