@@ -71,7 +71,7 @@
             <div class="col-5 col-lg-2">
                 <!-- Start Logo Area -->
                 <div class="logo-area">
-                    <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/logo.png") }}" alt="collines-Logo"></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/logo.png") }}" alt="collines-Logo" class="img-fluid" style="max-height:80px; width:auto;"></a>
                 </div>
                 <!-- End Logo Area -->
             </div>
@@ -143,7 +143,11 @@
                             <i class="mdi mdi-email"></i>
                         </a>
                     </div>
-                    <!-- <a href="tel:+254728312251" class="tel-no">0728312251</a> -->
+                    <a href="{{ route('contact') }}" 
+                        class="btn btn-outline-light btn-sm ms-2" 
+                        style="padding:4px 10px; font-size:13px; border-radius:4px;">
+                        Book Consultation
+                        </a>
                 </div>
                 <!-- End Header Action Area -->
             </div>
@@ -163,25 +167,22 @@
                 <!-- Left Section (Logo + Description) -->
                 <div class="col-lg-3 mb-4 mb-lg-0">
                     <div class="mb-3">
-                        <!-- <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:150px;"/></a> -->
+                        <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:120px; width:auto;"/></a>
                     </div>
-                    <h6 class="text-white">Our Work</h6>
-                    <p> Different Induatries. Same Quality Work</p>
                 </div>
 
                 <!-- Grid Section 1 -->
                 <div class="col-lg-3 mb-4 mb-lg-0">
-                    <h6 class="text-white">About</h6>
-                        <a href="{{ route('about') }}" class="text-white d-block mb-2">About Us</a>
+                        <a href="{{ route('about') }}" class="text-white d-block mb-2">Our Stpry</a>
                         <a href="{{ route('portfolio') }}" class="text-white d-block mb-2">Portfolio</a>
-                        <a href="{{ route('teams') }}" class="text-white d-block">Our Team</a>
+                        <a href="{{ route('services') }}" class="text-white d-block">What We Do</a>
                     </div>
                     
                     <!-- Grid Section 2 -->
                     <div class="col-lg-3 mb-4 mb-lg-0">
-                        <h6 class="text-white">Resources</h6>
                         <a href="{{ route('contact') }}" class="text-white d-block">Contact Us</a>
-                        <a href="{{ route('services') }}" class="text-white d-block mb-2">Our Services</a>
+                        <a href="{{ route('services') }}" class="text-white d-block mb-2">Portfolio</a>
+                        <a href="{{ route('teams') }}" class="text-white d-block">Portfolio</a>
                 </div>
 
                 <!-- Grid Section 3 (Social + Subscribe) -->
@@ -204,7 +205,11 @@
                         <i class="mdi mdi-email"></i>
                     </a>
                     </div>
-                        <a href="{{ route('contact') }}" class="btn-outline" style="color:#fff;">Book Consultation</a>
+                    <a href="{{ route('contact') }}" 
+                        class="btn btn-outline-light btn-sm ms-2" 
+                        style="padding:4px 10px; font-size:13px; border-radius:4px;">
+                        Book Consultation
+                        </a>
                 </div>
             </div>
 

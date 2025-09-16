@@ -107,41 +107,4 @@
 </div>
 <!--== End Page Content Area Wrapper ==-->
 
-<!--== Start Fun Fact Area Wrapper ==-->
-<div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">
-    <div class="container">
-        <div class="row mtn-40">
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">2654</span></h2>
-                    <h6 class="counter-txt">Happy Clients</h6>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">1520</span></h2>
-                    <h6 class="counter-txt">Project Done</h6>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">120</span></h2>
-                    <h6 class="counter-txt">Awards Win</h6>
-                </div>
-            </div>
-
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">3580</span></h2>
-                    <h6 class="counter-txt">Cups Coffee</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--== End Fun Fact Area Wrapper ==-->
-
 @endsection

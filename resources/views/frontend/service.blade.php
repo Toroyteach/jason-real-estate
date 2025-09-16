@@ -2,7 +2,7 @@
 @section('content')
 
 <!--== Start Page Header Area ==-->
-<div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/banner.jpg') }}'); position: relative;">
+<div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/img/page-header.jpg') }}'); position: relative;">
     <div style="position:absolute; inset:0; background:rgba(0,0,0,0.5); z-index:1;"></div>
 
     <div class="container" style="position: relative; z-index: 2;">
@@ -21,7 +21,7 @@
 <!--== End Page Header Area ==-->
 
 <!--== Start About Area Wrapper ==-->
-<div class="about-area-wrapper sm-top">
+<!-- <div class="about-area-wrapper sm-top">
     <div class="container">
         <div class="row align-items-lg-center">
             <div class="col-md-6 col-lg-7 order-1">
@@ -39,63 +39,82 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--== End About Area Wrapper ==-->
 
-<!--== Start Service Area Wrapper ==-->
-<div class="service-area-wrapper sm-top-wt">
-    <div class="service-area-top parallax" data-parallax-speed="0.75" data-bg="{{ asset("frontend/assets/img/service/service-bg.jpg") }}">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-xl-5 m-auto text-center">
-                    <div class="section-title section-title--light">
-                        <h6>OUR SERVICES</h6>
-                        <p class="mb-0">At Collines Comms, we believe every moment tells a story worth remembering. Our photography and videography services are designed to capture raw emotions, authentic experiences, and timeless memories.</p>
+<!--== Start Services Section ==-->
+<div class="about-area-wrapper py-5" role="region" aria-labelledby="our-services">
+  <div class="container">
+
+    @if(!empty($services) && count($services) > 0)
+      @foreach($services as $index => $service)
+        <div class="row align-items-center mb-5 flex-lg-row{{ $index % 2 === 0 ? '' : '-reverse' }}">
+          
+          <!-- Text -->
+          <div class="col-lg-6">
+            <div class="about-content px-3">
+              <h2 class="fw-bold mb-3">{{ $service->title }}</h2>
+              @if(!empty($service->sub_title))
+                <h5 class="text-muted mb-3 fst-italic">{{ $service->sub_title }}</h5>
+              @endif
+              <p class="lead">{{ $service->description }}</p>
+              <div class="mt-3">
+                <a href="{{ route('services.details', $service->slug) }}" 
+                   class="btn btn-lg shadow-sm" 
+                   style="background-color:#cc5200; color:#fff; border-radius:30px;">
+                   Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image / Carousel -->
+          <div class="col-lg-6">
+            @if(!empty($service->pics))
+              <div id="carousel-{{ $index }}" class="carousel slide shadow rounded-4 overflow-hidden" data-bs-ride="carousel" aria-label="Service Images">
+                <div class="carousel-inner">
+                  @foreach($service->pics as $key => $pic)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                      <img src="{{ asset($pic) }}" class="d-block w-100" alt="{{ $service->title }} image {{ $loop->iteration }}">
                     </div>
+                  @endforeach
                 </div>
-            </div>
-        </div>
-    </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{ $index }}" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{ $index }}" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1) sepia(1) saturate(5) hue-rotate(10deg);"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            @else
+              <figure class="shadow rounded-4 overflow-hidden">
+                <img src="{{ asset($service->pic) }}" class="img-fluid" alt="{{ $service->title }}">
+              </figure>
+            @endif
+          </div>
 
-    <div class="service-content-area">
-        <div class="container">
-            <div class="row mtn-30">
-                @forelse ($services as $service)
-                    <div class="col-sm-6 col-lg-4">
-                        <!-- Start Service Item -->
-                        <div class="service-item">
-                            <figure class="service-thumb">
-                                <a href="{{ route('services.details', $service->slug) }}">
-                                    <img src="{{ asset($service->pic) }}" alt="{{ $service->title }}"/>
-                                </a>
-                                <figcaption class="service-txt">
-                                    <h5>{{ $service->title }}</h5>
-                                </figcaption>
-                            </figure>
-                            <div class="service-content">
-                                <div class="service-content-inner">
-                                    <h5>
-                                        <a href="{{ route('services.details', $service->slug) }}" class="stretched-link">
-                                            {{ $service->title }}
-                                        </a>
-                                    </h5>
-                                    <p>{{ \Illuminate\Support\Str::limit($service->description, 100) }}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Service Item -->
-                    </div>
-                @empty
-                    <div class="col-12 text-center py-5">
-                        <p class="text-muted">No services available at the moment. Please check back soon.</p>
-                    </div>
-                @endforelse
-            </div>
         </div>
-    </div>
+      @endforeach
+    @else
+      <!-- Empty State -->
+      <div class="text-center py-5">
+        <div class="p-5 shadow-sm rounded-4" style="background:#fff3e6;">
+          <h3 class="fw-bold mb-3" style="color:#cc5200;">No Services Available</h3>
+          <p class="text-muted mb-4">We’re currently updating our service offerings. Please check back soon — exciting updates are on the way!</p>
+          <a href="{{ route('home') }}" 
+             class="btn btn-lg shadow-sm" 
+             style="background-color:#cc5200; color:#fff; border-radius:30px;">
+             Back to Home
+          </a>
+        </div>
+      </div>
+    @endif
 
+  </div>
 </div>
-<!--== End Service Area Wrapper ==-->
+<!--== End Services Section ==-->
 
 <!--== Start Pricing Table Area  ==-->
 <!-- <div class="pricing-plan-area sm-top">
@@ -463,42 +482,5 @@
     </div>
 </div>
 <!--== End Brand Logo Area Wrapper ==-->
-
-<!--== Start Fun Fact Area Wrapper ==-->
-<div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="src="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">
-    <div class="container">
-        <div class="row mtn-40">
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">2654</span></h2>
-                    <h6 class="counter-txt">Happy Clients</h6>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">1520</span></h2>
-                    <h6 class="counter-txt">Project Done</h6>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">120</span></h2>
-                    <h6 class="counter-txt">Awards Win</h6>
-                </div>
-            </div>
-
-
-            <div class="col-6 col-md-3 text-center">
-                <div class="counter-item">
-                    <h2 class="counter-number"><span class="counter">3580</span></h2>
-                    <h6 class="counter-txt">Cups Coffee</h6>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--== End Fun Fact Area Wrapper ==-->
 
 @endsection

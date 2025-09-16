@@ -96,7 +96,7 @@
 <!--== End About Area Wrapper ==-->
 
 <!--== Start Feature Area Wrapper ==-->
-<div class="feature-area-wrapper sm-top py-5" style="background:#f9f9f9;">
+<div class="feature-area-wrapper sm-top py-5" style="background:rgba(204,82,0);">
     <div class="container">
         <!-- Our Mission -->
         <div class="row mb-5">
@@ -219,6 +219,19 @@
 
 <!--== Start Brand Logo Area Wrapper ==-->
 <div class="brand-logo-area sm-top">
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xl-5 m-auto text-center">
+                <div class="section-title mb-5">
+                    <h6 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;">Our Work</h6>
+                    <h4 class="mb-2">Different Industries. Same Quality Work</h4>
+                    <div class="mx-auto mt-3" style="width:60px; height:3px; background:#cc5200;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-12">

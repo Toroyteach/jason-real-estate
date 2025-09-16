@@ -217,8 +217,9 @@
             <div class="row">
                 <div class="col-lg-6 col-xl-5 m-auto text-center">
                     <div class="section-title" style="color:#fff;">
-                        <h6 style="color:#fff;">OUR SERVICES</h6>
-                        <p class="mb-0">At Collines Comms, we believe every moment tells a story worth remembering. Our photography and videography services are designed to capture raw emotions, authentic experiences, and timeless memories.</p>
+                        <h6 class="fw-bold mb-3" style="color:#fff;">OUR SERVICES</h6>
+                        <p style="font-size:16px;" class="mb-0">At Collines Comms, we believe every moment tells a story worth remembering. Our photography and videography services are designed to capture raw emotions, authentic experiences, and timeless memories.</p>
+                        <div class="mx-auto mt-3" style="width:60px; height:3px; background:#cc5200;"></div>
                     </div>
                 </div>
             </div>
@@ -338,7 +339,7 @@
         </div>
 
         <div class="col-xl-8">
-            <div class="team-area-right team-area-right--2 bg-img" data-bg="{{ asset("frontend/assets/img/team/team-bg-2.jpg") }}">
+            <div class="team-area-right team-area-right--2 bg-img" data-bg="{{ asset("frontend/assets/banner.jpg") }}">
                 <div class="row g-0 align-items-end mtn-40">
                     @foreach($teams as $member)
                         <div class="col-sm-6 col-lg-2">
@@ -402,6 +403,19 @@
 
 <!--== Start Brand Logo Area Wrapper ==-->
 <div class="brand-logo-area sm-top">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xl-5 m-auto text-center">
+                <div class="section-title mb-5">
+                    <h6 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;">Our Work</h6>
+                    <h4 class="mb-2">Different Industries. Same Quality Work</h4>
+                    <div class="mx-auto mt-3" style="width:60px; height:3px; background:#cc5200;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-12">

@@ -100,7 +100,7 @@
                                     <br>
                                     info@collinecommunication.com
                                     <br>
-                                    (+254) 728312251
+                                    0728312251
                                 </address>
                             </div>
                             <div class="member-social-icons mt-30">
