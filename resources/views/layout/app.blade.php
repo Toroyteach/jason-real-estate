@@ -59,6 +59,21 @@
         font-family: 'Poppins', sans-serif;
         color: #ff7b00 !important; /* strong orange */
     }
+
+    .brand-logo-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px; /* set the parent height */
+        max-width: 200px; /* optional: control width */
+        margin: auto;
+    }
+
+    .brand-logo-item img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+    }
     </style>
 </head>
 
@@ -173,16 +188,16 @@
 
                 <!-- Grid Section 1 -->
                 <div class="col-lg-3 mb-4 mb-lg-0">
-                        <a href="{{ route('about') }}" class="text-white d-block mb-2">Our Stpry</a>
-                        <a href="{{ route('portfolio') }}" class="text-white d-block mb-2">Portfolio</a>
+                    <a href="{{ route('home') }}" class="text-white d-block mb-2">Home</a>
+                        <a href="{{ route('about') }}" class="text-white d-block mb-2">Our Story</a>
                         <a href="{{ route('services') }}" class="text-white d-block">What We Do</a>
                     </div>
                     
                     <!-- Grid Section 2 -->
                     <div class="col-lg-3 mb-4 mb-lg-0">
-                        <a href="{{ route('contact') }}" class="text-white d-block">Contact Us</a>
-                        <a href="{{ route('services') }}" class="text-white d-block mb-2">Portfolio</a>
                         <a href="{{ route('teams') }}" class="text-white d-block">Portfolio</a>
+                        <a href="{{ route('teams') }}" class="text-white d-block mb-2">Team</a>
+                        <a href="{{ route('contact') }}" class="text-white d-block">Contact Us</a>
                 </div>
 
                 <!-- Grid Section 3 (Social + Subscribe) -->

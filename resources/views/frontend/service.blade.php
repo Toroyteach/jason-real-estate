@@ -59,11 +59,6 @@
               @endif
               <p class="lead">{{ $service->description }}</p>
               <div class="mt-3">
-                <a href="{{ route('services.details', $service->slug) }}" 
-                   class="btn btn-lg shadow-sm" 
-                   style="background-color:#cc5200; color:#fff; border-radius:30px;">
-                   Learn More
-                </a>
               </div>
             </div>
           </div>
@@ -391,6 +386,19 @@
 
 <!--== Start Brand Logo Area Wrapper ==-->
 <div class="brand-logo-area sm-top">
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xl-5 m-auto text-center">
+                <div class="section-title mb-5">
+                    <h6 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;">Our Work</h6>
+                    <h4 class="mb-2">Different Industries. Same Quality Work</h4>
+                    <div class="mx-auto mt-3" style="width:60px; height:3px; background:#cc5200;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <div class="container">
         <div class="row">
             <div class="col-12">

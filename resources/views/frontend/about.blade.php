@@ -31,19 +31,23 @@
                     <span class="about-since d-inline-block mb-4 text-muted fst-italic">Since 2010</span>
                     
                     <p class="mb-3">
-                        Collines Communications began with a simple belief that every person and brand has a story worth sharing. Founded by a team of visual storytellers with backgrounds in photojournalism, commercial production, and communication strategy, we started as a passion project to tell human stories across Kenya. Over time, we evolved into a full-service visual communications studio, blending artistic direction with technical precision and purpose-driven messaging.
+                    Collines communications began with a simple belief that every person and brands have a story worth sharing. Founded by a team of visual storytellers with backgrounds in photojournalism, commercial production, and communication strategy, Collines Communications began as a passion project to telling human stories across Kenya. Over time, we evolved into a full-service visual communications studio, blending artistic direction with technical precision and purpose-driven messaging.
                     </p>
                     
                     <p class="mb-3">
-                        Based in Ongata Rongai, Kenya, our mission is to understand what you do and guide you in telling your story to your target clients and markets. We pride ourselves on excellent customer service, helping you with long-term project goals through videos, photos, animations, audio, graphics, websites, digital marketing, and print media.
+                    We are based in Ongata Rongai. Kenya, and our business is understanding what you do and helping guide you through telling your stories to your target clients or markets. 
                     </p>
 
                     <p class="mb-3">
-                        With roots in creative thinking, filmmaking, photography, graphic design, web development, and digital marketing, we tailor each project to reflect authenticity, purpose, and local context — creating visuals that resonate in East Africa and beyond.
+                    We pride ourselves on great customer service, which entails helping you with your long-term project goals through videos, photos, animations, audio, graphics, websites, digital marketing and print media. 
                     </p>
 
                     <p class="mb-4">
-                        We have helped small businesses, entrepreneurs, and large corporate clients tell their stories to the world, powered by our dedicated team of young and creative thinkers.
+                    With roots in creative thinking, filmmaking, photography, graphic designing, web developing, & digital marketing, we tailor each project to reflect authenticity, purpose, and local context which is basically creating visuals that resonate in east Africa and beyond.
+                    </p>
+
+                    <p class="mb-4">
+                    We have helped different small businesses and entrepreneurs to a diverse range of large corporate clients to tell their stories to the world with the help of our dedicated team of young and creative thinkers.
                     </p>
 
                     <!-- Highlighted Points -->
@@ -108,8 +112,7 @@
                     <div class="icon-box__info">
                         <h3 class="fw-bold mb-3">Our Mission</h3>
                         <p class="text-muted" style="font-size:16px; line-height:1.6;">
-                            To empower individuals, organizations, and brands by crafting authentic, visually compelling 
-                            content that captures essence, builds trust, amplifies your message and connects audiences.
+                        To empower individuals, organizations, and brands by crafting authentic, visually compelling content that captures essence, builds trust, amplifies your message and connects audiences.
                         </p>
                     </div>
                 </div>
@@ -118,44 +121,61 @@
 
         <!-- Our Values -->
         <div class="row g-4">
-            <!-- Integrity -->
+
+            <!-- Our Team -->
             <div class="col-md-4">
                 <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset('frontend/assets/img/feature/02.png') }}" alt="Integrity Icon" style="width:60px;"/>
+                        <img src="{{ asset('frontend/assets/img/feature/02.png') }}" alt="Our Team Icon" style="width:60px;"/>
                     </div>
                     <div class="icon-box__info">
-                        <h5 class="fw-bold mb-2">Integrity</h5>
-                        <p class="text-muted">Truthful storytelling with respect and ethical representation.</p>
+                        <h5 class="fw-bold mb-3">Our Team</h5>
+                        <ul class="list-unstyled text-muted text-start d-inline-block" role="list">
+                            <li>Founder and managing director- Collines Omondi</li>
+                            <li>Digital Media strategist- Anne Kibei</li>
+                            <li>Lead cinematographer- Samuel Oduor</li>
+                            <li>Lead photographer- Samuel Gitau.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Innovation -->
+            <!-- Our Values -->
             <div class="col-md-4">
                 <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Innovation Icon" style="width:60px;"/>
+                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Our Values Icon" style="width:60px;"/>
                     </div>
                     <div class="icon-box__info">
-                        <h5 class="fw-bold mb-2">Innovation</h5>
-                        <p class="text-muted">Combining traditional craft with digital trends.</p>
+                        <h5 class="fw-bold mb-3">Our Values</h5>
+                        <ul class="list-unstyled text-muted text-start d-inline-block" role="list">
+                            <li><strong>Integrity:</strong> truthful storytelling with respect and ethical representation.</li>
+                            <li><strong>Innovation:</strong> combining traditional craft with digital trends.</li>
+                            <li><strong>Impact:</strong> We create visuals that change perceptions and spark action.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Impact -->
+            <!-- Why Choose Us -->
             <div class="col-md-4">
                 <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Impact Icon" style="width:60px;"/>
+                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Why Choose Us Icon" style="width:60px;"/>
                     </div>
                     <div class="icon-box__info">
-                        <h5 class="fw-bold mb-2">Impact</h5>
-                        <p class="text-muted">We create visuals that change perceptions and spark action.</p>
+                        <h5 class="fw-bold mb-3">Why Choose Us?</h5>
+                        <ul class="list-unstyled text-muted text-start d-inline-block" role="list">
+                            <li><strong>Authenticity-driven:</strong> we are grounded in real stories, real impact and local culture.</li>
+                            <li><strong>Full-service:</strong> from planning to editing to distribution.</li>
+                            <li><strong>Result-oriented:</strong> we don’t just deliver content; we provide visuals that connect and convert.</li>
+                            <li><strong>Collaborative:</strong> we listen, iterate, and tailor solutions for your goals.</li>
+                            <li><strong>Professionalism:</strong> we value timeliness, collaboration, and excellence.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>

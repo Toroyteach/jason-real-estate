@@ -10,8 +10,8 @@
             <div class="col-lg-10 col-xl-8 m-auto text-center">
                 <div class="page-header-content-inner">
                     <div class="page-header-content">
-                        <h2 style="color: #fff;"> THE COLLINES COMMS TEAM </h2>
-                        <p style="color: #eee;">We are a passionate team of creatives, strategists, and storytellers committed to bringing your vision to life through impactful media and communication.</p>
+                        <h2 style="color: #fff;"> Meet Our Team </h2>
+                        <p style="color: #eee;">A passionate group of professionals driving creativity, strategy, and impact.</p>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
 <!--== End Page Header Area ==-->
 
 <!--== Start About Area Wrapper ==-->
-<div class="about-area-wrapper sm-top">
+<!-- <div class="about-area-wrapper sm-top">
     <div class="container">
         <div class="row align-items-lg-center">
             <div class="col-md-6 col-lg-7 order-1">
@@ -39,38 +39,102 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!--== End About Area Wrapper ==-->
 
-<!--== Start Team Area Wrapper ==-->
-<div class="team-page-area-wrapper bg-offwhite sp-y sm-top">
-    <div class="container">
-        <div class="row mtn-30">
-            @forelse ($teams as $member)
-                <div class="col-sm-6 col-lg-3">
-                    <div class="team-mem-item">
-                        <figure class="member-pic">
-                            <img src="{{ asset($member->img_src ?? 'frontend/assets/img/team/01.jpg') }}" alt="{{ $member->name }}" />
-                        </figure>
-                        <div class="member-info">
-                            <h5>
-                                <a href="{{ route('teams.details', $member->slug) }}" class="stretched-link">
-                                    {{ $member->name }}
-                                </a>
-                            </h5>
-                            <span class="designation">{{ $member->title }}</span>
-                        </div>
+<section class="" style="background:#fdfbf9;">
+  <div class="container">
+
+    <div class="row gy-5">
+      @foreach($teams as $index => $team)
+        <div class="col-12">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+            <div class="row g-0 flex-column flex-md-row {{ $index % 2 ? 'flex-md-row-reverse' : '' }}">
+              
+              <!-- Image -->
+              <div class="col-md-4">
+                <img src="{{ asset($team->img_src) }}"
+                     alt="{{ $team->name }}"
+                     class="img-fluid h-100 w-100 object-fit-cover">
+              </div>
+
+              <!-- Content -->
+              <div class="col-md-8">
+                <div class="card-body p-4 d-flex flex-column h-100">
+                  <h4 class="fw-bold mb-1" style="color:#cc5200;">{{ $team->name }}</h4>
+                  <p class="text-muted mb-2">{{ $team->title }}</p>
+                  <p class="small mb-3">{{ $team->message }}</p>
+                  
+                  <!-- Quote -->
+                  @if(!empty($team->quote))
+                  <blockquote class="blockquote border-start ps-3 mb-3" style="border-color:#cc5200;">
+                    <p class="mb-0 fst-italic">“{{ $team->quote }}”</p>
+                  </blockquote>
+                  @endif
+
+                  <!-- Skills -->
+                  @if(!empty($team->skills))
+                  <div class="mb-3">
+                    @foreach($team->skills as $skill)
+                      <span class="badge rounded-pill px-3 py-2 me-1 mb-1 text-light" style="background:#cc5200;">
+                        {{ $skill }}
+                      </span>
+                    @endforeach
+                  </div>
+                  @endif
+
+                  <!-- Contact -->
+                  <div class="mt-auto">
+                    @if(!empty($team->phone))
+                      <div class="d-flex align-items-center mb-2">
+                        <i class="bi bi-telephone me-2" style="color:#cc5200;"></i>
+                        <small>{{ $team->phone }}</small>
+                      </div>
+                    @endif
+                    @if(!empty($team->email))
+                      <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-envelope me-2" style="color:#cc5200;"></i>
+                        <small>{{ $team->email }}</small>
+                      </div>
+                    @endif
+
+                    <!-- Socials -->
+                    <div>
+                      @if(!empty($team->socials->instagram))
+                        <a href="{{ $team->socials->instagram }}" target="_blank" class="me-2 text-decoration-none">
+                          <i class="bi bi-instagram fs-5" style="color:#cc5200;"></i>
+                        </a>
+                      @endif
+                      @if(!empty($team->socials->twitter))
+                        <a href="{{ $team->socials->twitter }}" target="_blank" class="me-2 text-decoration-none">
+                          <i class="bi bi-twitter fs-5" style="color:#cc5200;"></i>
+                        </a>
+                      @endif
+                      @if(!empty($team->socials->linkedin))
+                        <a href="{{ $team->socials->linkedin }}" target="_blank" class="text-decoration-none">
+                          <i class="bi bi-linkedin fs-5" style="color:#cc5200;"></i>
+                        </a>
+                      @endif
                     </div>
+
+                    <div>
+                        <a href="{{ route('teams.details', $team->slug) }}" 
+                        class="btn text-light fw-semibold px-4 py-2 rounded-pill shadow-sm"
+                        style="background:#cc5200; transition: all 0.3s ease;">
+                        View Profile
+                        </a>
+                    </div>
+                  </div>
                 </div>
-            @empty
-                <div class="col-12 text-center py-5">
-                    <p class="text-muted">No team members found. Please check back soon.</p>
-                </div>
-            @endforelse
+              </div>
+
+            </div>
+          </div>
         </div>
+      @endforeach
     </div>
-</div>
-<!--== End Team Area Wrapper ==-->
+  </div>
+</section>
 
 <!--== Start Fun Fact Area Wrapper ==-->
 <!-- <div class="fun-fact-area sm-top parallax" data-parallax-speed="0.70" data-bg="src="{{ asset("frontend/assets/img/fun-fact-bg.jpg") }}">
