@@ -39,6 +39,58 @@
       </div>
     </div>
 
+    
+<section style="display: flex; flex-wrap: wrap; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin: 20px; font-family: Arial, sans-serif; color: #333;">
+  
+  <!-- Left Panel -->
+  <div style="flex: 1 1 300px; background: #e6f1fb; padding: 20px;">
+    <img src="snv-logo.png" alt="SNV Logo" style="width: 120px; display: block; margin-bottom: 10px;">
+    <h2 style="color: #0077cc; margin: 10px 0;">Impact that matters</h2>
+
+    <p><strong>Service offered:</strong> Photography, Videography, Drone and Editing</p>
+
+    <p>
+      <strong>Description of work</strong><br>
+      Documentation of the impact of The EnDev Humanitarian Market-Based Energy Access (MBEA) Project in Kakuma Refugee and Kalobeyei Integrated Settlement camps.
+    </p>
+
+    <p><a href="https://youtu.be/abc123" style="color: #0077cc; text-decoration: none;">https://youtu.be/abc123</a></p>
+
+    <p>
+      <strong>Referee</strong><br>
+      Bibiana Wanaiwenge<br>
+      Media & Communication<br>
+      <a href="mailto:bwanaiwenge@snv.org" style="color: #0077cc; text-decoration: none;">bwanaiwenge@snv.org</a><br>
+      +254 722 233375
+    </p>
+  </div>
+
+  <!-- Right Panel -->
+  <div style="flex: 2 1 500px; padding: 20px;">
+    <h3 style="color: #0077cc; margin-bottom: 15px;">Results</h3>
+
+    <div style="
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      grid-gap: 10px;
+    ">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+    </div>
+  </div>
+</section>
+
+
+
+
+
     <!-- Tabs -->
     <ul class="nav nav-pills justify-content-center mb-5" id="portfolioTabs" role="tablist">
       <li class="nav-item" role="presentation">
