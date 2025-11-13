@@ -80,7 +80,7 @@
                     <div class="tp-caption tp-resizeme slide-heading" data-x="['center','center','center','center']"
                          data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
                          data-voffset="['250','204','200','201']" data-fontsize="['55','60','50','30']"
-                         data-fontweight="['600']" data-color="#fff" data-lineheight="['65','70','60','40']"
+                         data-fontweight="['600']" data-color="#eae1e1ff" data-lineheight="['65','70','60','40']"
                          data-width="['1000','650','600','320']" data-height="none" data-whitespace="normal"
                          data-type="text" data-responsive_offset="on"
                          data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
@@ -409,7 +409,7 @@
         <div class="row">
             <div class="col-lg-6 col-xl-5 m-auto text-center">
                 <div class="section-title mb-5">
-                    <h6 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;">Our Work</h6>
+                    <h3 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;"><strong>Our Work</strong></h3>
                     <h4 class="mb-2" style="white-space: nowrap;">Different Industries. Same Quality Work</h4>
                     <div class="mx-auto mt-3" style="width:100%; max-width:400px; height:3px; background:#cc5200;"></div>
                 </div>
