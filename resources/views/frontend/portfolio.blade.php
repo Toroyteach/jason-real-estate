@@ -74,15 +74,17 @@
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
       grid-gap: 10px;
     ">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      <img src="public/frontend/assets/photo.jpg" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+          
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+      
     </div>
   </div>
 </section>
