@@ -391,9 +391,9 @@
         <div class="row">
             <div class="col-lg-6 col-xl-5 m-auto text-center">
                 <div class="section-title mb-5">
-                    <h6 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;">Our Work</h6>
-                    <h4 class="mb-2">Different Industries. Same Quality Work</h4>
-                    <div class="mx-auto mt-3" style="width:60px; height:3px; background:#cc5200;"></div>
+                    <h3 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;"><strong>Our Work</strong></h3>
+                    <h4 class="mb-2" style="white-space: nowrap;">Different Industries. Same Quality Work</h4>
+                    <div class="mx-auto mt-3" style="width:100%; max-width:400px; height:3px; background:#cc5200;"></div>
                 </div>
             </div>
         </div>

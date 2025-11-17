@@ -117,13 +117,13 @@
                       @endif
                     </div>
 
-                    <div>
+                    <!-- <div>
                         <a href="{{ route('teams.details', $team->slug) }}" 
                         class="btn text-light fw-semibold px-4 py-2 rounded-pill shadow-sm"
                         style="background:#cc5200; transition: all 0.3s ease;">
                         View Profile
                         </a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>

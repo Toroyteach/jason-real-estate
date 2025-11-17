@@ -4,24 +4,24 @@
 
 <!--== Start Page Header Area ==-->
 <div class="page-header-area bg-img" style="background-image: url('{{ asset('frontend/assets/banner.jpg') }}'); position: relative;">
-    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.55); z-index:1;"></div>
+  <div style="position:absolute; inset:0; background:rgba(0,0,0,0.55); z-index:1;"></div>
 
-    <div class="container" style="position: relative; z-index: 2;">
-        <div class="row">
-            <div class="col-lg-10 col-xl-8 m-auto text-center">
-                <div class="page-header-content-inner">
-                    <div class="page-header-content">
-                        <h2 style="color: #fff;">OUR PORTFOLIO</h2>
-                        <p style="color: #eee;">
-                            Discover a showcase of our work — films, photography, animations, graphics, and campaigns crafted 
-                            to help individuals, organizations, and brands share authentic stories and connect with audiences 
-                            across East Africa and beyond.
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="container" style="position: relative; z-index: 2;">
+    <div class="row">
+      <div class="col-lg-10 col-xl-8 m-auto text-center">
+        <div class="page-header-content-inner">
+          <div class="page-header-content">
+            <h2 style="color: #fff;">OUR PORTFOLIO</h2>
+            <p style="color: #eee;">
+              Discover a showcase of our work — films, photography, animations, graphics, and campaigns crafted
+              to help individuals, organizations, and brands share authentic stories and connect with audiences
+              across East Africa and beyond.
+            </p>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 <!--== End Page Header Area ==-->
 
@@ -33,68 +33,55 @@
       <div class="col text-center">
         <h2 class="fw-bold">OUR PORTFOLIO</h2>
         <p class="text-muted">
-          Explore our creative showcase — videos, photos, animations, graphics, and campaigns crafted 
+          Explore our creative showcase — videos, photos, animations, graphics, and campaigns crafted
           to connect brands with people and tell authentic stories.
         </p>
       </div>
     </div>
 
-    
-<section style="display: flex; flex-wrap: wrap; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin: 20px; font-family: Arial, sans-serif; color: #333;">
-  
-  <!-- Left Panel -->
-  <div style="flex: 1 1 300px; background: #e6f1fb; padding: 20px;">
-    <img src="snv-logo.png" alt="SNV Logo" style="width: 120px; display: block; margin-bottom: 10px;">
-    <h2 style="color: #0077cc; margin: 10px 0;">Impact that matters</h2>
 
-    <p><strong>Service offered:</strong> Photography, Videography, Drone and Editing</p>
+    @forelse ($services as $service)
+    <section style="display: flex; flex-wrap: wrap; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin: 20px; font-family: Arial, sans-serif; color: #333;">
 
-    <p>
-      <strong>Description of work</strong><br>
-      Documentation of the impact of The EnDev Humanitarian Market-Based Energy Access (MBEA) Project in Kakuma Refugee and Kalobeyei Integrated Settlement camps.
-    </p>
+      <!-- Left Panel -->
+      <div style="flex: 1 1 300px; background: #e6f1fb; padding: 20px;">
+        <img src="{{ asset($service->pic) }}" alt="{{ $service->title }}" style="width: 120px; display: block; margin-bottom: 10px;">
 
-    <p><a href="https://youtu.be/abc123" style="color: #0077cc; text-decoration: none;">https://youtu.be/abc123</a></p>
+        <h2 style="color: #0077cc; margin: 10px 0;">{{ $service->title }}</h2>
 
-    <p>
-      <strong>Referee</strong><br>
-      Bibiana Wanaiwenge<br>
-      Media & Communication<br>
-      <a href="mailto:bwanaiwenge@snv.org" style="color: #0077cc; text-decoration: none;">bwanaiwenge@snv.org</a><br>
-      +254 722 233375
-    </p>
-  </div>
+        @if($service->sub_title)
+        <p><strong>{{ $service->sub_title }}</strong></p>
+        @endif
 
-  <!-- Right Panel -->
-  <div style="flex: 2 1 500px; padding: 20px;">
-    <h3 style="color: #0077cc; margin-bottom: 15px;">Results</h3>
+        <p><strong>Description</strong><br>{!! nl2br(e($service->description)) !!}</p>
+      </div>
 
-    <div style="
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-      grid-gap: 10px;
-    ">
-          
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-            <img src="{{ asset('frontend/assets/img/photo.jpg') }}" alt="" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
-      
-    </div>
-  </div>
-</section>
+      <!-- Right Panel -->
+      <div style="flex: 2 1 500px; padding: 20px;">
+        <h3 style="color: #0077cc; margin-bottom: 15px;">Images</h3>
+
+        <div style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 10px;
+        ">
+          @foreach ($service->pics as $pic)
+          <img src="{{ asset($pic) }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 6px;">
+          @endforeach
+        </div>
+      </div>
+
+    </section>
+    @empty
+    <p>No services found.</p>
+    @endforelse
 
 
 
 
 
     <!-- Tabs -->
-    <ul class="nav nav-pills justify-content-center mb-5" id="portfolioTabs" role="tablist">
+    <!-- <ul class="nav nav-pills justify-content-center mb-5" id="portfolioTabs" role="tablist">
       <li class="nav-item" role="presentation">
         <button class="nav-link active" id="videos-tab" data-bs-toggle="pill" data-bs-target="#videos" type="button" role="tab">
           🎬 Videos
@@ -115,12 +102,11 @@
           ✨ Animations
         </button>
       </li>
-    </ul>
+    </ul> -->
 
     <!-- Tab Content -->
-    <div class="tab-content" id="portfolioTabsContent">
-      
-      <!-- Videos Tab -->
+    <!-- <div class="tab-content" id="portfolioTabsContent">
+
       <div class="tab-pane fade show active" id="videos" role="tabpanel">
         <div class="row g-4">
           <div class="col-md-6">
@@ -150,7 +136,6 @@
         </div>
       </div>
 
-      <!-- Images Tab -->
       <div class="tab-pane fade" id="images" role="tabpanel">
         <div class="row g-4">
           <div class="col-md-6">
@@ -180,7 +165,6 @@
         </div>
       </div>
 
-      <!-- Graphics Tab -->
       <div class="tab-pane fade" id="graphics" role="tabpanel">
         <div class="row g-4">
           <div class="col-md-6">
@@ -210,7 +194,6 @@
         </div>
       </div>
 
-      <!-- Animations Tab -->
       <div class="tab-pane fade" id="animations" role="tabpanel">
         <div class="row g-4">
           <div class="col-md-6">
@@ -240,7 +223,7 @@
         </div>
       </div>
 
-    </div>
+    </div> -->
   </div>
 </section>
 <!--== End Portfolio Area Wrapper ==-->

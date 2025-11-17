@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>{{ config('app.name') }}</title>
 
     <!--== Favicon ==-->
-    <link rel="shortcut icon" href="{{ asset("frontend/assets/logo.png")}}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{ asset("frontend/assets/logo.png")}}" type="image/x-icon" />
 
     <!--== Google Fonts ==-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,87 +17,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <!--== All Magnific Popup CSS ==-->
-    <link href="{{ asset("frontend/assets/css/magnific-popup.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/magnific-popup.min.css")}}" rel="stylesheet" />
     <!--== All Animate CSS ==-->
-    <link href="{{ asset("frontend/assets/css/animate.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/animate.min.css")}}" rel="stylesheet" />
     <!--== All FontAwesome CSS ==-->
-    <link href="{{ asset("frontend/assets/css/font-awesome.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/font-awesome.min.css")}}" rel="stylesheet" />
     <!--== All Material Icons CSS ==-->
-    <link href="{{ asset("frontend/assets/css/materialdesignicons.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/materialdesignicons.min.css")}}" rel="stylesheet" />
     <!--== All Helper CSS ==-->
-    <link href="{{ asset("frontend/assets/css/helper.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/helper.min.css")}}" rel="stylesheet" />
     <!--== All Revolution CSS ==-->
-    <link href="{{ asset("frontend/assets/css/settings.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/settings.css")}}" rel="stylesheet" />
     <!--== All Slicknav CSS ==-->
-    <link href="{{ asset("frontend/assets/css/slicknav.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/slicknav.min.css")}}" rel="stylesheet" />
     <!--== All Timeline CSS ==-->
-    <link href="{{ asset("frontend/assets/css/timeline.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/timeline.css")}}" rel="stylesheet" />
     <!--== All Slick Slider CSS ==-->
-    <link href="{{ asset("frontend/assets/css/slick.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/slick.min.css")}}" rel="stylesheet" />
     <!--== All BootStrap CSS ==-->
-    <link href="{{ asset("frontend/assets/css/bootstrap.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/bootstrap.min.css")}}" rel="stylesheet" />
     <!--== Main Style CSS ==-->
-    <link href="{{ asset("frontend/assets/css/style.min.css")}}" rel="stylesheet"/>
+    <link href="{{ asset("frontend/assets/css/style.min.css")}}" rel="stylesheet" />
 
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-    .nav-pills .nav-link.active {
-        background-color: #CC5200 !important;
-        color: #fff !important;
-    }
-    .nav-pills .nav-link:hover {
-        color: #CC5200;
-    }
-    .portfolio-content a {
-        text-decoration: none;
-    }
+        .nav-pills .nav-link.active {
+            background-color: #CC5200 !important;
+            color: #fff !important;
+        }
 
-    .pop-heading {
-        font-family: 'Poppins', sans-serif;
-        color: #ff7b00 !important; /* strong orange */
-    }
+        .nav-pills .nav-link:hover {
+            color: #CC5200;
+        }
 
-    .brand-logo-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 120px; /* set the parent height */
-        max-width: 200px; /* optional: control width */
-        margin: auto;
-    }
+        .portfolio-content a {
+            text-decoration: none;
+        }
 
-    .brand-logo-item img {
-        max-height: 100%;
-        max-width: 100%;
-        object-fit: contain;
-    }
+        .pop-heading {
+            font-family: 'Poppins', sans-serif;
+            color: #ff7b00 !important;
+            /* strong orange */
+        }
+
+        .brand-logo-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            /* set the parent height */
+            max-width: 200px;
+            /* optional: control width */
+            margin: auto;
+        }
+
+        .brand-logo-item img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .sp-y {
+            padding: 50px 0;
+        }
     </style>
 </head>
 
 <body>
 
-<!--== Start Header Area Wrapper ==-->
-<header class="header-area">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-5 col-lg-2">
-                <!-- Start Logo Area -->
-                <div class="logo-area">
-                    <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/logo.png") }}" alt="collines-Logo" class="img-fluid" style="max-height:80px; width:auto;"></a>
+    <!--== Start Header Area Wrapper ==-->
+    <header class="header-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-5 col-lg-2">
+                    <!-- Start Logo Area -->
+                    <div class="logo-area">
+                        <a href="{{ route('home') }}"><img src="{{ asset("frontend/assets/logo.png") }}" alt="collines-Logo" class="img-fluid" style="max-height:80px; width:auto;"></a>
+                    </div>
+                    <!-- End Logo Area -->
                 </div>
-                <!-- End Logo Area -->
-            </div>
 
-            <div class="col-lg-8 d-none d-lg-block">
-                <!-- Start Navigation Area -->
-                <div class="navigation-area">
-                <ul class="main-menu nav">
-                    <!-- <li><a href="{{ route('home') }}">Home</a></li> -->
+                <div class="col-lg-8 d-none d-lg-block">
+                    <!-- Start Navigation Area -->
+                    <div class="navigation-area">
+                        <ul class="main-menu nav">
+                            <!-- <li><a href="{{ route('home') }}">Home</a></li> -->
 
-                    <!-- <li class="has-submenu"><a href="#">Pages</a>
+                            <!-- <li class="has-submenu"><a href="#">Pages</a>
                         <ul class="submenu-nav submenu-nav-mega">
                             <li class="mega-menu-item">
                                 <ul>
@@ -115,7 +124,7 @@
                         </ul>
                     </li> -->
 
-                    <!-- <li class="has-submenu"><a href="{{ route('services') }}">Service</a>
+                            <!-- <li class="has-submenu"><a href="{{ route('services') }}">Service</a>
                         <ul class="submenu-nav">
                             <li><a href="{{ route('services') }}">Service</a></li>
                         </ul>
@@ -127,234 +136,237 @@
                         </ul>
                     </li> -->
 
-                    <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('about') }}">Our Story</a></li>
-                    <li><a href="{{ route('services') }}">What We Do</a></li>
-                    <li><a href="{{ route('teams') }}">Teams</a></li>
-                    <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
-                    <li><a href="{{ route('contact') }}">Contact</a></li>
-                </ul>
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('about') }}">Our Story</a></li>
+                            <li><a href="{{ route('services') }}">What We Do</a></li>
+                            <li><a href="{{ route('teams') }}">Teams</a></li>
+                            <li><a href="{{ route('blogs.index') }}">Blog</a></li>
+                            <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
+                            <li><a href="{{ route('contact') }}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- End Navigation Area -->
                 </div>
-                <!-- End Navigation Area -->
-            </div>
 
-            <div class="col-7 col-lg-2">
-                <!-- Start Header Action Area -->
-                <div class="header-action text-end">
-                    <div class="member-social-icons ms-3">
-                        <a href="https://instagram.com/collinescomms" target="_blank" rel="noopener">
-                            <i class="mdi mdi-instagram"></i>
-                        </a>
-                        <a href="https://twitter.com/CollinesComms" target="_blank" rel="noopener">
-                            <i class="mdi mdi-twitter"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@collinescomms" target="_blank" rel="noopener">
-                            <i class="mdi mdi-youtube"></i>
-                        </a>
-                        <a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" rel="noopener">
-                            <i class="mdi mdi-whatsapp"></i>
-                        </a>
-                        <a href="mailto:info@collinecommunications.com" target="_blank" rel="noopener">
-                            <i class="mdi mdi-email"></i>
+                <div class="col-7 col-lg-2">
+                    <!-- Start Header Action Area -->
+                    <div class="header-action text-end">
+                        <div class="member-social-icons ms-3">
+                            <a href="https://instagram.com/collinescomms" target="_blank" rel="noopener">
+                                <i class="mdi mdi-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/CollinesComms" target="_blank" rel="noopener">
+                                <i class="mdi mdi-twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@collinescomms" target="_blank" rel="noopener">
+                                <i class="mdi mdi-youtube"></i>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" rel="noopener">
+                                <i class="mdi mdi-whatsapp"></i>
+                            </a>
+                            <a href="mailto:info@collinecommunications.com" target="_blank" rel="noopener">
+                                <i class="mdi mdi-email"></i>
+                            </a>
+                        </div>
+                        <a href="{{ route('contact') }}"
+                            class="btn btn-outline-light btn-sm ms-2"
+                            style="padding:4px 10px; font-size:13px; border-radius:4px;">
+                            Book Consultation
                         </a>
                     </div>
-                    <a href="{{ route('contact') }}" 
-                        class="btn btn-outline-light btn-sm ms-2" 
-                        style="padding:4px 10px; font-size:13px; border-radius:4px;">
-                        Book Consultation
-                        </a>
+                    <!-- End Header Action Area -->
                 </div>
-                <!-- End Header Action Area -->
+
             </div>
-            
         </div>
-    </div>
-</header>
-<!--== End Header Area Wrapper ==-->
+    </header>
+    <!--== End Header Area Wrapper ==-->
 
-@yield('content')
+    @yield('content')
 
-<!--== Start Footer Area Wrapper ==-->
-<footer class="footer-area sp-y" style="background:#cc5200; color:#fff;">
-    <div class="footer-widget-area py-5">
-        <div class="container">
-            <div class="row">
-                <!-- Left Section (Logo + Description) -->
-                <div class="col-lg-3 mb-4 mb-lg-0">
-                    <div class="mb-3">
-                        <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:120px; width:auto;"/></a>
+    <!--== Start Footer Area Wrapper ==-->
+    <footer class="footer-area sp-y" style="background:#cc5200; color:#fff;">
+        <div class="footer-widget-area py-2">
+            <div class="container">
+                <div class="row">
+                    <!-- Left Section (Logo + Description) -->
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <div class="mb-3">
+                            <a href="index.html"><img src="frontend/assets/logo.png" alt="{{ config('app.name') }}" style="max-height:120px; width:auto;" /></a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Grid Section 1 -->
-                <div class="col-lg-3 mb-4 mb-lg-0">
-                    <a href="{{ route('home') }}" class="text-white d-block mb-2">Home</a>
+                    <!-- Grid Section 1 -->
+                    <div class="col-lg-3 mb-4 mb-lg-0">
+                        <a href="{{ route('home') }}" class="text-white d-block mb-2">Home</a>
                         <a href="{{ route('about') }}" class="text-white d-block mb-2">Our Story</a>
                         <a href="{{ route('services') }}" class="text-white d-block">What We Do</a>
                     </div>
-                    
+
                     <!-- Grid Section 2 -->
                     <div class="col-lg-3 mb-4 mb-lg-0">
                         <a href="{{ route('teams') }}" class="text-white d-block">Portfolio</a>
                         <a href="{{ route('teams') }}" class="text-white d-block mb-2">Team</a>
                         <a href="{{ route('contact') }}" class="text-white d-block">Contact Us</a>
-                </div>
-
-                <!-- Grid Section 3 (Social + Subscribe) -->
-                <div class="col-lg-3">
-                    <h6 class="text-white">Follow Us</h6>
-                    <div class="d-flex mb-3">
-                    <a href="https://instagram.com/collinescomms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
-                        <i class="mdi mdi-instagram"></i>
-                    </a>
-                    <a href="https://twitter.com/CollinesComms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
-                        <i class="mdi mdi-twitter"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@collinescomms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
-                        <i class="mdi mdi-youtube"></i>
-                    </a>
-                    <a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
-                        <i class="mdi mdi-whatsapp"></i>
-                    </a>
-                    <a href="mailto:info@collinecommunications.com" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark" style="width:36px; height:36px;">
-                        <i class="mdi mdi-email"></i>
-                    </a>
                     </div>
-                    <a href="{{ route('contact') }}" 
-                        class="btn btn-outline-light btn-sm ms-2" 
-                        style="padding:4px 10px; font-size:13px; border-radius:4px;">
-                        Book Consultation
+
+                    <!-- Grid Section 3 (Social + Subscribe) -->
+                    <div class="col-lg-3">
+                        <h6 class="text-white">Follow Us</h6>
+                        <div class="d-flex mb-3">
+                            <a href="https://instagram.com/collinescomms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                                <i class="mdi mdi-instagram"></i>
+                            </a>
+                            <a href="https://twitter.com/CollinesComms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                                <i class="mdi mdi-twitter"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@collinescomms" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                                <i class="mdi mdi-youtube"></i>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=254728312251" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark me-2" style="width:36px; height:36px;">
+                                <i class="mdi mdi-whatsapp"></i>
+                            </a>
+                            <a href="mailto:info@collinecommunications.com" target="_blank" class="d-inline-flex align-items-center justify-content-center rounded-circle bg-white text-dark" style="width:36px; height:36px;">
+                                <i class="mdi mdi-email"></i>
+                            </a>
+                        </div>
+                        <a href="{{ route('contact') }}"
+                            class="btn btn-outline-light btn-sm ms-2"
+                            style="padding:4px 10px; font-size:13px; border-radius:4px;">
+                            Book Consultation
                         </a>
-                </div>
-            </div>
-
-            <!-- Bottom -->
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; <script>document.write(new Date().getFullYear())</script> {{ config('app.name') }}. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--== End Footer Area Wrapper ==-->
-
-<!-- Scroll Top Button -->
-<button class="btn-scroll-top"><i class="mdi mdi-chevron-up"></i></button>
-
-<!-- Start Off Canvas Menu Wrapper -->
-<aside class="off-canvas-wrapper off-canvas-cog">
-    <div class="off-canvas-overlay"></div>
-    <div class="off-canvas-inner">
-        <div class="close-btn">
-            <button class="btn-close"><i class="mdi mdi-close"></i></button>
-        </div>
-
-        <!-- Start Off Canvas Content -->
-        <div class="off-canvas-content mb-sm-30">
-            <div class="off-canvas-item">
-                <div class="log-in-content-wrap">
-                    <h2>Login</h2>
-                    <div class="login-form mtn-15">
-                        <form action="#" method="post">
-                            <div class="form-input-item">
-                                <label for="username" class="sr-only">Username</label>
-                                <input type="text" id="username" placeholder="Username" required>
-                            </div>
-
-                            <div class="form-input-item">
-                                <label for="password" class="sr-only">Password</label>
-                                <input type="password" id="password" placeholder="Password" required>
-                            </div>
-
-                            <div class="form-input-item">
-                                <button type="submit" class="btn-submit">Login</button>
-                            </div>
-                        </form>
                     </div>
+                </div>
 
-                    <div class="sign-up-notification">
-                        <p>Not Resisted? <a href="#">Create Account Now.</a></p>
+                <!-- Bottom -->
+                <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">&copy; <script>
+                                document.write(new Date().getFullYear())
+                            </script> {{ config('app.name') }}. All Rights Reserved. Designed by ...</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </footer>
+    <!--== End Footer Area Wrapper ==-->
 
-            <div class="off-canvas-item mt-sm-30">
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <a href="https://dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
-                    <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
+    <!-- Scroll Top Button -->
+    <button class="btn-scroll-top"><i class="mdi mdi-chevron-up"></i></button>
+
+    <!-- Start Off Canvas Menu Wrapper -->
+    <aside class="off-canvas-wrapper off-canvas-cog">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner">
+            <div class="close-btn">
+                <button class="btn-close"><i class="mdi mdi-close"></i></button>
+            </div>
+
+            <!-- Start Off Canvas Content -->
+            <div class="off-canvas-content mb-sm-30">
+                <div class="off-canvas-item">
+                    <div class="log-in-content-wrap">
+                        <h2>Login</h2>
+                        <div class="login-form mtn-15">
+                            <form action="#" method="post">
+                                <div class="form-input-item">
+                                    <label for="username" class="sr-only">Username</label>
+                                    <input type="text" id="username" placeholder="Username" required>
+                                </div>
+
+                                <div class="form-input-item">
+                                    <label for="password" class="sr-only">Password</label>
+                                    <input type="password" id="password" placeholder="Password" required>
+                                </div>
+
+                                <div class="form-input-item">
+                                    <button type="submit" class="btn-submit">Login</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="sign-up-notification">
+                            <p>Not Resisted? <a href="#">Create Account Now.</a></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="copyright-content">
-                    <p>&copy;
-                        <script>
-                            document.write(new Date().getFullYear())
-                        </script>
-                        {{ config('app.name') }}. All Rights Reserved.
-                    </p>
+
+                <div class="off-canvas-item mt-sm-30">
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                        <a href="https://dribbble.com" target="_blank"><i class="fa fa-dribbble"></i></a>
+                        <a href="https://pinterest.com" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    </div>
+                    <div class="copyright-content">
+                        <p>&copy;
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                            {{ config('app.name') }}. All Rights Reserved.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</aside>
-<!-- End Off Canvas Menu Wrapper -->
+    </aside>
+    <!-- End Off Canvas Menu Wrapper -->
 
-<!-- Start Off Canvas Menu Wrapper -->
-<aside class="off-canvas-wrapper off-canvas-menu">
-    <div class="off-canvas-overlay"></div>
-    <div class="off-canvas-inner">
-        <!-- Start Off Canvas Header -->
-        <div class="close-btn">
-            <button class="btn-close"><i class="mdi mdi-close"></i></button>
-        </div>
+    <!-- Start Off Canvas Menu Wrapper -->
+    <aside class="off-canvas-wrapper off-canvas-menu">
+        <div class="off-canvas-overlay"></div>
+        <div class="off-canvas-inner">
+            <!-- Start Off Canvas Header -->
+            <div class="close-btn">
+                <button class="btn-close"><i class="mdi mdi-close"></i></button>
+            </div>
 
-        <!-- Start Off Canvas Content -->
-        <div class="off-canvas-content">
-            <div class="res-mobile-menu">
+            <!-- Start Off Canvas Content -->
+            <div class="off-canvas-content">
+                <div class="res-mobile-menu">
 
+                </div>
             </div>
         </div>
-    </div>
-</aside>
-<!-- End Off Canvas Menu Wrapper -->
+    </aside>
+    <!-- End Off Canvas Menu Wrapper -->
 
-<!--=======================Javascript============================-->
-<script src="{{ asset("frontend/assets/js/modernizr-3.6.0.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/jquery.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/jquery-migrate.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/bootstrap.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/waypoint.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/counterup.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/instafeed.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/jquery.appear.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/jquery.slicknav.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/parallax.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/slick.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/plugins/magnific-popup.min.js")}}"></script>
+    <!--=======================Javascript============================-->
+    <script src="{{ asset("frontend/assets/js/modernizr-3.6.0.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/jquery.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/jquery-migrate.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/bootstrap.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/waypoint.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/counterup.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/instafeed.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/jquery.appear.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/jquery.slicknav.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/parallax.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/slick.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/plugins/magnific-popup.min.js")}}"></script>
 
-<!--=== Active Js ===-->
-<script src="{{ asset("frontend/assets/js/active.min.js")}}"></script>
+    <!--=== Active Js ===-->
+    <script src="{{ asset("frontend/assets/js/active.min.js")}}"></script>
 
-<!-- REVOLUTION JS FILES -->
-<script src="{{ asset("frontend/assets/js/revslider/jquery.themepunch.tools.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/jquery.themepunch.revolution.min.js")}}"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="{{ asset("frontend/assets/js/revslider/jquery.themepunch.tools.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/jquery.themepunch.revolution.min.js")}}"></script>
 
 
-<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.actions.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.carousel.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.kenburn.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.layeranimation.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.migration.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.navigation.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.parallax.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.slideanims.min.js")}}"></script>
-<script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.video.min.js")}}"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.actions.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.carousel.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.kenburn.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.layeranimation.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.migration.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.navigation.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.parallax.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.slideanims.min.js")}}"></script>
+    <script src="{{ asset("frontend/assets/js/revslider/extensions/revolution.extension.video.min.js")}}"></script>
 
-<!--=== REVOLUTION JS ===-->
-<script src="{{ asset("frontend/assets/js/revslider/rev-active.js")}}"></script>
+    <!--=== REVOLUTION JS ===-->
+    <script src="{{ asset("frontend/assets/js/revslider/rev-active.js")}}"></script>
 
 </body>
 

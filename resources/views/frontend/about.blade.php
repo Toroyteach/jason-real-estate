@@ -22,32 +22,32 @@
 <div class=" py-5">
     <div class="container">
         <div class="row align-items-center">
-            
+
             <!-- Text Section -->
             <div class="col-lg-6 mb-4 mb-lg-0">
                 <div class="about-content about-content--2">
                     <h6 class="text-uppercase fw-bold mb-3">ABOUT US</h6>
                     <h2 class="fw-bold mb-3">Our Story</h2>
-                    <span class="about-since d-inline-block mb-4 text-muted fst-italic">Since 2010</span>
-                    
+                    <span class="about-since d-inline-block mb-4 text-muted fst-italic">Since 2017</span>
+
                     <p class="mb-3">
-                    Collines communications began with a simple belief that every person and brands have a story worth sharing. Founded by a team of visual storytellers with backgrounds in photojournalism, commercial production, and communication strategy, Collines Communications began as a passion project to telling human stories across Kenya. Over time, we evolved into a full-service visual communications studio, blending artistic direction with technical precision and purpose-driven messaging.
-                    </p>
-                    
-                    <p class="mb-3">
-                    We are based in Ongata Rongai. Kenya, and our business is understanding what you do and helping guide you through telling your stories to your target clients or markets. 
+                        Collines communications began with a simple belief that every person and brands have a story worth sharing. Founded by a team of visual storytellers with backgrounds in photojournalism, commercial production, and communication strategy, Collines Communications began as a passion project to telling human stories across Kenya. Over time, we evolved into a full-service visual communications studio, blending artistic direction with technical precision and purpose-driven messaging.
                     </p>
 
                     <p class="mb-3">
-                    We pride ourselves on great customer service, which entails helping you with your long-term project goals through videos, photos, animations, audio, graphics, websites, digital marketing and print media. 
+                        We are based in Ongata Rongai. Kenya, and our business is understanding what you do and helping guide you through telling your stories to your target clients or markets.
                     </p>
 
-                    <p class="mb-4">
-                    With roots in creative thinking, filmmaking, photography, graphic designing, web developing, & digital marketing, we tailor each project to reflect authenticity, purpose, and local context which is basically creating visuals that resonate in east Africa and beyond.
+                    <p class="mb-3">
+                        We pride ourselves on great customer service, which entails helping you with your long-term project goals through videos, photos, animations, audio, graphics, websites, digital marketing and print media.
                     </p>
 
                     <p class="mb-4">
-                    We have helped different small businesses and entrepreneurs to a diverse range of large corporate clients to tell their stories to the world with the help of our dedicated team of young and creative thinkers.
+                        With roots in creative thinking, filmmaking, photography, graphic designing, web developing, & digital marketing, we tailor each project to reflect authenticity, purpose, and local context which is basically creating visuals that resonate in east Africa and beyond.
+                    </p>
+
+                    <p class="mb-4">
+                        We have helped different small businesses and entrepreneurs to a diverse range of large corporate clients to tell their stories to the world with the help of our dedicated team of young and creative thinkers.
                     </p>
 
                     <!-- Highlighted Points -->
@@ -61,7 +61,7 @@
                         <div class="col-6 col-md-4">
                             <div class="p-3 bg-light rounded-3 shadow-sm text-center h-100">
                                 <h6 class="fw-bold mb-1">Experience</h6>
-                                <small class="text-muted">Since 2010</small>
+                                <small class="text-muted">Since 2017</small>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
@@ -107,12 +107,12 @@
             <div class="col-12">
                 <div class="text-center p-4 rounded shadow-sm bg-white" style="transition:0.3s; border-left:5px solid #cc5200;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset('frontend/assets/img/feature/01.png') }}" alt="Mission Icon" style="width:70px;"/>
+                        <img src="{{ asset('frontend/assets/img/feature/01.png') }}" alt="Mission Icon" style="width:70px;" />
                     </div>
                     <div class="icon-box__info">
                         <h3 class="fw-bold mb-3">Our Mission</h3>
                         <p class="text-muted" style="font-size:16px; line-height:1.6;">
-                        To empower individuals, organizations, and brands by crafting authentic, visually compelling content that captures essence, builds trust, amplifies your message and connects audiences.
+                            To empower individuals.
                         </p>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
             <div class="col-md-4">
                 <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset('frontend/assets/img/feature/02.png') }}" alt="Our Team Icon" style="width:60px;"/>
+                        <img src="{{ asset('frontend/assets/img/feature/02.png') }}" alt="Our Team Icon" style="width:60px;" />
                     </div>
                     <div class="icon-box__info">
                         <h5 class="fw-bold mb-3">Our Team</h5>
@@ -144,7 +144,7 @@
             <div class="col-md-4">
                 <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Our Values Icon" style="width:60px;"/>
+                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Our Values Icon" style="width:60px;" />
                     </div>
                     <div class="icon-box__info">
                         <h5 class="fw-bold mb-3">Our Values</h5>
@@ -161,7 +161,7 @@
             <div class="col-md-4">
                 <div class="text-center p-4 rounded shadow-sm bg-white h-100" style="transition:0.3s;">
                     <div class="icon-box__icon mb-3">
-                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Why Choose Us Icon" style="width:60px;"/>
+                        <img src="{{ asset('frontend/assets/img/feature/03.png') }}" alt="Why Choose Us Icon" style="width:60px;" />
                     </div>
                     <div class="icon-box__info">
                         <h5 class="fw-bold mb-3">Why Choose Us?</h5>
@@ -240,13 +240,13 @@
 <!--== Start Brand Logo Area Wrapper ==-->
 <div class="brand-logo-area sm-top">
 
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-lg-6 col-xl-5 m-auto text-center">
                 <div class="section-title mb-5">
-                    <h6 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;">Our Work</h6>
-                    <h4 class="mb-2">Different Industries. Same Quality Work</h4>
-                    <div class="mx-auto mt-3" style="width:60px; height:3px; background:#cc5200;"></div>
+                    <h3 class="text-uppercase text-dark fw-bold mb-2" style="letter-spacing:2px;"><strong>Our Work</strong></h3>
+                    <h4 class="mb-2" style="white-space: nowrap;">Different Industries. Same Quality Work</h4>
+                    <div class="mx-auto mt-3" style="width:100%; max-width:400px; height:3px; background:#cc5200;"></div>
                 </div>
             </div>
         </div>
@@ -258,83 +258,83 @@
                 <div class="brand-logo-content slick-row-20">
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/GiveWatts-logo-Collines-Communications-Concept-client.png') }}" alt="GiveWatts Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/GiveWatts-logo-Collines-Communications-Concept-client.png') }}" alt="GiveWatts Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Good-Kenyan-logo-Collines-Communications-Concept-client.png') }}" alt="Good Kenyan Logo"/></a>
-                    </div>
-                    
-                    <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Good-Kenyan-logo-Collines-Communications-Concept-client.png') }}" alt="Good Kenyan Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Hand-in-Hand-logo-Collines-Communications-Concept-client.png') }}" alt="Hand in Hand Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Crimson-Realty-logo-Collines-Communications-Concept-client.png') }}" alt="Crimson Realty Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Urgent-Action-Fund-Africa-logo-Collines-Communications-Concept-Client.png') }}" alt="Urgent Action Fund Africa Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Hand-in-Hand-logo-Collines-Communications-Concept-client.png') }}" alt="Hand in Hand Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Network-for-Ecofarming-in-Africa-logo-Collines-Communications-Concept-client.png') }}" alt="Network for Ecofarming in Africa Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Urgent-Action-Fund-Africa-logo-Collines-Communications-Concept-Client.png') }}" alt="Urgent Action Fund Africa Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Winnie-Rohi-Co-Advocates-logo-Collines-Communications-Concept-client.png') }}" alt="Winnie Rohi Co Advocates Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Network-for-Ecofarming-in-Africa-logo-Collines-Communications-Concept-client.png') }}" alt="Network for Ecofarming in Africa Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Utmost-Precision-logo-Collines-Communications-Concept-client.png') }}" alt="Utmost Precision Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Winnie-Rohi-Co-Advocates-logo-Collines-Communications-Concept-client.png') }}" alt="Winnie Rohi Co Advocates Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/The-Master-Green-Organic-Foods-Collines-Communications-Concept-client.png') }}" alt="The Master Green Organic Foods Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Utmost-Precision-logo-Collines-Communications-Concept-client.png') }}" alt="Utmost Precision Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Tahmo-logo-Collines-Communications-Concept-client.png') }}" alt="Tahmo Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/The-Master-Green-Organic-Foods-Collines-Communications-Concept-client.png') }}" alt="The Master Green Organic Foods Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Serv-International-logo-Collines-Communications-Concept-client.png') }}" alt="Serv International Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Tahmo-logo-Collines-Communications-Concept-client.png') }}" alt="Tahmo Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Samaritans-logo-Collines-Communications-Concept-client.png') }}" alt="Samaritans Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Serv-International-logo-Collines-Communications-Concept-client.png') }}" alt="Serv International Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Premier-Academy-logo-Collines-Communications-Concept-client.png') }}" alt="Premier Academy Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Samaritans-logo-Collines-Communications-Concept-client.png') }}" alt="Samaritans Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/NAYA-logo-Collines-Communications-Concept-client.png') }}" alt="NAYA Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Premier-Academy-logo-Collines-Communications-Concept-client.png') }}" alt="Premier Academy Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/MP-Shah-Hospital-logo-Collines-Communications-Concept-client.png') }}" alt="MP Shah Hospital Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/NAYA-logo-Collines-Communications-Concept-client.png') }}" alt="NAYA Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Metis-logo-Collines-Communications-Concept-client.png') }}" alt="Metis Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/MP-Shah-Hospital-logo-Collines-Communications-Concept-client.png') }}" alt="MP Shah Hospital Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Lactone-Investments-logo-Collines-Communications-Concept-client.png') }}" alt="Lactone Investments Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Metis-logo-Collines-Communications-Concept-client.png') }}" alt="Metis Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kodera-Greenhouses-logo-Collines-Communications-Concept-client.png') }}" alt="Kodera Greenhouses Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Lactone-Investments-logo-Collines-Communications-Concept-client.png') }}" alt="Lactone Investments Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kotra-logo-Collines-Communications-Concept-client.png') }}" alt="Kotra Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kodera-Greenhouses-logo-Collines-Communications-Concept-client.png') }}" alt="Kodera Greenhouses Logo" /></a>
                     </div>
 
                     <div class="brand-logo-item">
-                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kenya-National-Bureue-Of-Statistics-logo-Collines-Communications-Concept-client.png') }}" alt="Kenya National Bureau Of Statistics Logo"/></a>
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kotra-logo-Collines-Communications-Concept-client.png') }}" alt="Kotra Logo" /></a>
+                    </div>
+
+                    <div class="brand-logo-item">
+                        <a href="#"><img src="{{ asset('frontend/assets/brands/Kenya-National-Bureue-Of-Statistics-logo-Collines-Communications-Concept-client.png') }}" alt="Kenya National Bureau Of Statistics Logo" /></a>
                     </div>
 
                 </div>

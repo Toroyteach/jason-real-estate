@@ -55,7 +55,8 @@ class PageController extends Controller
 
     public function portfolio()
     {
-        return view('frontend.portfolio');
+        $services = $this->getServices();
+        return view('frontend.portfolio', compact('services'));
     }
     
     public function teams()
