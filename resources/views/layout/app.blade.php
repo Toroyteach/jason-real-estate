@@ -141,6 +141,7 @@
                             <li><a href="{{ route('services') }}">What We Do</a></li>
                             <li><a href="{{ route('teams') }}">Teams</a></li>
                             <li><a href="{{ route('blogs.index') }}">Blog</a></li>
+                            <li><a href="{{ route('testimonials.index') }}">Testimonial</a></li>
                             <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
                             <li><a href="{{ route('contact') }}">Contact</a></li>
                         </ul>

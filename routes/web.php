@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\TestimonialController;
+
 
 Route::prefix('blog')->name('blogs.')->group(function () {
     Route::get('/', [BlogController::class, 'index'])->name('index'); // /blog
@@ -10,6 +12,12 @@ Route::prefix('blog')->name('blogs.')->group(function () {
     Route::get('/category/{category}', [BlogController::class, 'showByCategory'])->name('categories.show');
     Route::get('/tag/{tag}', [BlogController::class, 'show'])->name('tags.show');
     Route::post('/{blog}/comment', [BlogController::class, 'storeComment'])->name('blog.comment');
+});
+
+Route::prefix('testimonial')->name('testimonials.')->group(function () {
+    Route::get('/', [testimonialController::class, 'index'])->name('index'); // /blog
+    Route::get('{slug}', [testimonialController::class, 'show'])->name('show'); // /blog/{slug}
+    
 });
 
 Route::get('/', [PageController::class, 'home'])->name('home');
