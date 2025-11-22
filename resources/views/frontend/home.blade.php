@@ -77,30 +77,37 @@
                         data-no-retina>
 
                     <!-- LAYER NR. 4 -->
-                    <div class="tp-caption tp-resizeme slide-heading" data-x="['center','center','center','center']"
-                        data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
-                        data-voffset="['250','204','200','201']" data-fontsize="['55','60','50','30']"
-                        data-fontweight="['600']" data-color="#eae1e1ff" data-lineheight="['65','70','60','40']"
-                        data-width="['1000','650','600','320']" data-height="none" data-whitespace="normal"
-                        data-type="text" data-responsive_offset="on"
-                        data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                        data-textAlign="['center']">
-                        Visual Storytelling That Elevates Your Brand
-                    </div>
+                    <!-- BOX CONTAINER LIKE THE BUTTON -->
+<div class="tp-caption rev-btn"
+    data-x="['center','center','center','center']"
+    data-hoffset="['0','0','0','0']"
+    data-y="['top','top','top','top']"
+    data-voffset="['250','240','230','220']"
+    data-width="['800','700','600','320']"
+    data-height="auto"
+    data-whitespace="normal"
+    data-type="button"
+    data-responsive_offset="on"
+    data-frames='[{"delay":10,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"}]'
+    data-paddingtop="[40,40,30,20]"
+    data-paddingright="[40,40,30,20]"
+    data-paddingbottom="[40,40,30,20]"
+    data-paddingleft="[40,40,30,20]"
+    style="background:#F5F5DC; border-radius: 12px; text-align:center;">
 
-                    <!-- LAYER NR. 5 -->
-                    <div class="tp-caption tp-resizeme slide-txt" data-x="['center','center','center','center']"
-                        data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
-                        data-voffset="['400','370','370','300']" data-fontsize="['16','20','20','20']"
-                        data-fontweight="['400','400','400','400']" data-color="#fff"
-                        data-width="['600','600','600','320']" data-height="none" data-whitespace="normal"
-                        data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on"
-                        data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                        data-textAlign="['center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                        At Collines Communications, we don’t just take pictures — we craft narratives that resonate across cultures, locally and globally.
-                        <br>Seamless storytelling from intimate moments to high-impact brand campaigns.
-                    </div>
+    <!-- HEADING TEXT INSIDE -->
+    <div style="color:#8B4513; font-size:40px; font-weight:700; margin-bottom:20px;">
+        Visual Storytelling That Elevates Your Brand
+    </div>
+
+    <!-- PARAGRAPH TEXT INSIDE -->
+    <div style="color:#8B4513; font-size:18px; font-weight:500; line-height:1.6;">
+        At Collines Communications, we don’t just take pictures — we craft narratives that resonate across cultures, locally and globally.
+        <br>Seamless storytelling from intimate moments to high-impact brand campaigns.
+    </div>
+
+</div>
+
 
                     <!-- LAYER NR. 6 -->
                     <div class="tp-caption Button-Outline-Secondary rev-btn"
@@ -127,29 +134,37 @@
                         data-no-retina>
 
                     <!-- LAYER NR. 4 -->
-                    <div class="tp-caption tp-resizeme slide-heading" data-x="['center','center','center','center']"
-                        data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
-                        data-voffset="['250','204','200','201']" data-fontsize="['55','60','50','30']"
-                        data-fontweight="['600']" data-color="#fff" data-lineheight="['65','70','60','40']"
-                        data-width="['1000','650','600','320']" data-height="none" data-whitespace="normal"
-                        data-type="text" data-responsive_offset="on"
-                        data-frames='[{"delay":10,"split":"chars","splitdelay":0.1,"speed":1000,"split_direction":"forward","frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
-                        data-textAlign="['center']">
-                        From Moments to Motion — We Bring Stories to Life
-                    </div>
+                    
 
-                    <!-- LAYER NR. 5 -->
-                    <div class="tp-caption tp-resizeme slide-txt" data-x="['center','center','center','center']"
-                        data-hoffset="['0','0','0','0']" data-y="['top','top','top','top']"
-                        data-voffset="['400','370','370','300']" data-fontsize="['16','20','20','20']"
-                        data-fontweight="['400','400','400','400']" data-color="#fff"
-                        data-width="['600','600','600','320']" data-height="none" data-whitespace="normal"
-                        data-visibility="['on','on','on','on']" data-type="text" data-responsive_offset="on"
-                        data-frames='[{"delay":360,"split":"lines","splitdelay":0.1,"speed":500,"split_direction":"forward","frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                        data-textAlign="['center']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
-                        data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
-                        From scroll-stopping social campaigns to polished corporate profiles, we combine storytelling, aesthetic, and strategy to amplify your voice.
-                        <br>Inspired by design, driven by purpose.
+                                        <!-- BOX CONTAINER -->
+                    <div class="tp-caption rev-btn"
+                        data-x="['center','center','center','center']"
+                        data-hoffset="['0','0','0','0']"
+                        data-y="['top','top','top','top']"
+                        data-voffset="['250','240','230','220']"
+                        data-width="['800','700','600','320']"
+                        data-height="auto"
+                        data-whitespace="normal"
+                        data-type="button"
+                        data-responsive_offset="on"
+                        data-frames='[{"delay":10,"speed":500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"}]'
+                        data-paddingtop="[40,40,30,20]"
+                        data-paddingright="[40,40,30,20]"
+                        data-paddingbottom="[40,40,30,20]"
+                        data-paddingleft="[40,40,30,20]"
+                        style="background:#F5F5DC; border-radius: 12px; text-align:center;">
+                    
+                        <!-- HEADING -->
+                        <div style="color:#8B4513; font-size:40px; font-weight:700; margin-bottom:20px;">
+                            From Moments to Motion — We Bring Stories to Life
+                        </div>
+                    
+                        <!-- PARAGRAPH -->
+                        <div style="color:#8B4513; font-size:18px; font-weight:500; line-height:1.6;">
+                            From scroll-stopping social campaigns to polished corporate profiles, 
+                            we combine storytelling, aesthetic, and strategy to amplify your voice.Inspired by design, driven by purpose.
+                        </div>
+                    
                     </div>
 
                     <!-- LAYER NR. 6 -->
